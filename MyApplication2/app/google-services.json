@@ -1,0 +1,83 @@
+{
+  "project_info": {
+    "project_number": "871489785394",
+    "firebase_url": "https://campaignbeta-44d01.firebaseio.com",
+    "project_id": "campaignbeta-44d01",
+    "storage_bucket": "campaignbeta-44d01.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:871489785394:android:cc8eeb5224b6c04c45b62b",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "871489785394-9qcq17diccsjjhesop3ob98c3kmrsviv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCR8OAD9Y_ivsjwkZzXEgPa_DJWu6PV3z0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "871489785394-9qcq17diccsjjhesop3ob98c3kmrsviv.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "871489785394-7l4fj9idalii2g21cc7hgegt2bj8at12.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.tokopo.campaign"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:871489785394:android:15dfa878ae54016b",
+        "android_client_info": {
+          "package_name": "paratu.com.apps.campaign"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "871489785394-9qcq17diccsjjhesop3ob98c3kmrsviv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCR8OAD9Y_ivsjwkZzXEgPa_DJWu6PV3z0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "871489785394-9qcq17diccsjjhesop3ob98c3kmrsviv.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "871489785394-7l4fj9idalii2g21cc7hgegt2bj8at12.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.tokopo.campaign"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

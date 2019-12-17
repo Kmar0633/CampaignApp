@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageChallenge"
+                    android:layout_width="400dp"
+                    android:layout_height="352dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="150dp"
+
+                    android:scaleType="fitXY">
+
+                </ImageView>
+                <LinearLayout
+                    android:layout_width="400dp"
+                    android:layout_marginLeft="-400dp"
+                    android:layout_marginTop="500dp"
+                    android:orientation="horizontal"
+                    android:id="@+id/middlelayout"
+                    android:layout_height="693dp">
+                    <TextView
+                        android:id="@+id/challengeTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="70dp"
+                        android:text="Save Ocean!"
+
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-400dp"
+                        android:layout_marginTop="120dp"
+                        android:text="16 December 2019"
+
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-400dp"
+                        android:layout_marginTop="160dp"
+                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget quam at nunc condimentum maximus vel ut libero. Vivamus ullamcorper ex at enim lobortis, at blandit justo aliquam. Donec malesuada iaculis nulla id facilisis. Vivamus ac tristique quam, sit amet ultricies enim. Praesent semper purus tortor, sed tempus nisi tempus ultrices. Nunc sollicitudin justo id metus mattis tincidunt. Aliquam lacinia, magna commodo volutpat eleifend, magna odio pellentesque lorem, sed porttitor leo lorem ac erat. Nunc pellentesque sagittis tortor vel hendrerit. Nulla a feugiat odio. Aliquam massa nisi, congue sed magna quis, vulputate imperdiet turpis. Praesent ornare sapien sit amet dolor eleifend, sit amet consequat nibh molestie. Cras nec elit ut ante laoreet finibus vitae non massa."
+
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="-400dp"
+                    android:layout_marginTop="1150dp"
+                    android:layout_below="@id/middlelayout"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="0dp"
+                        android:text="What can we do?"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="0dp"
+                        android:text="Tteststsffef"
+                        android:layout_marginTop="40dp"
+
+                        />
+
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
