@@ -1,5 +1,7 @@
 package com.example.myapplication;
 
+import com.google.firebase.database.DataSnapshot;
+
 public class GroupChallengeEntity {
     String title;
 
@@ -10,9 +12,15 @@ public class GroupChallengeEntity {
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
     }
-
+    String keyID;
     String imageUrl;
-
+    DataSnapshot dataSnapshot;
+    public void setKeyID(String keyID){
+        this.keyID=keyID;
+    }
+    public String getKeyID(){
+        return this.keyID;
+    }
     public String getDescription() {
         return description;
     }
@@ -31,4 +39,10 @@ public class GroupChallengeEntity {
         this.title = title;
     }
 
+    public DataSnapshot getDataSnapshot(){
+        return dataSnapshot;
+    }
+    public void setDataSnapshot(DataSnapshot dataSnapshot){
+         this.dataSnapshot=dataSnapshot;
+    }
 }

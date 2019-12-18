@@ -46,6 +46,7 @@ public Object getItem(int i) {
 public long getItemId(int i) {
         return 0;
         }
+
 @Override
 public View getView(int i, View view, ViewGroup viewGroup) {
         LayoutInflater layoutInflater=(LayoutInflater) activity.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
