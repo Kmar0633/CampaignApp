@@ -3,6 +3,25 @@ package com.example.myapplication;
 public class GroupChallenges {
     String action_id;
 
+    public String getDesciption() {
+        return desciption;
+    }
+
+    public void setDesciption(String desciption) {
+        this.desciption = desciption;
+    }
+
+    String desciption;
+    public String getImage_url() {
+        return image_url;
+    }
+
+    public void setImage_url(String image_url) {
+        this.image_url = image_url;
+    }
+
+    String image_url;
+
     public String getChallenge_id() {
         return challenge_id;
     }

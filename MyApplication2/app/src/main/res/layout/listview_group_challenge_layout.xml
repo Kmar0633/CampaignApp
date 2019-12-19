@@ -7,18 +7,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <ImageView
+            android:id="@+id/imageChallenge"
+            android:layout_width="187dp"
+            android:layout_height="148dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
 
+            >
+
+        </ImageView>
 
         <TextView
             android:id="@+id/action_id"
-            android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="200dp"
+            android:text="testing"
             android:layout_marginTop="0dp"
-            >
+            android:textStyle="bold">
 
         </TextView>
+
         <TextView
             android:id="@+id/challenge_id"
             android:layout_width="match_parent"

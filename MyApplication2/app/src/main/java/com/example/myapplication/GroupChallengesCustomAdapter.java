@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import android.app.Activity;
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,11 +15,11 @@ import com.bumptech.glide.Glide;
 import java.util.ArrayList;
 
 public class GroupChallengesCustomAdapter extends BaseAdapter {
-    ArrayList<GroupChallengeEntity> groupChallengeEntityArrayList;
+    ArrayList<GroupChallenges> groupChallengeEntityArrayList;
     private final Context activity;
 
-
-    public GroupChallengesCustomAdapter(ArrayList<GroupChallengeEntity> groupChallengeEntityArrayList1, Context activity1){
+    private String urlLink="https://static-images.campaign.com/?t=act&w=500&crop=true&file=";
+    public GroupChallengesCustomAdapter(ArrayList<GroupChallenges> groupChallengeEntityArrayList1, Context activity1){
         this.activity=activity1;
         this.groupChallengeEntityArrayList=groupChallengeEntityArrayList1;
     }
@@ -40,13 +41,17 @@ public class GroupChallengesCustomAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         LayoutInflater layoutInflater=(LayoutInflater) activity.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
-        view = layoutInflater.inflate(R.layout.listview_layout, null);
-
+        view = layoutInflater.inflate(R.layout.listview_group_challenge_layout, null);
+        ImageView imageView=(ImageView)view.findViewById(R.id.imageChallenge);
         TextView textView=(TextView)view.findViewById(R.id.challenge_id);
         TextView textView1=(TextView)view.findViewById(R.id.action_id);
+        textView.setText(this.groupChallengeEntityArrayList.get(i).getAction_id()+"test");
+        Glide.with(this.activity).load(urlLink+this.groupChallengeEntityArrayList.get(i).getImage_url()).into(imageView);
 
-        textView1.setText(this.groupChallengeEntityArrayList.get(i).getDescription());
-        textView.setText(this.groupChallengeEntityArrayList.get(i).getTitle());
+        Log.e("kevin",this.groupChallengeEntityArrayList.get(i).getImage_url() + " action_id");
+        Log.e("kevin",this.groupChallengeEntityArrayList.get(i).getImage_url() + " action_id");
+        //textView1.setText(this.groupChallengeEntityArrayList.get(i).getDescription());
+     //   textView.setText(this.groupChallengeEntityArrayList.get(i).getTitle());
         return view;
     }
 

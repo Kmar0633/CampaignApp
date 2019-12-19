@@ -73,6 +73,15 @@
                         android:textSize="20dp"
                         android:textStyle="bold" />
 
+                    <TextView
+                        android:id="@+id/textChallenge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Challenges View"
+                        android:textSize="20dp"
+
+
+                        />
 
 
                 </LinearLayout>
@@ -93,15 +102,16 @@
                         android:text="Challenges"
                         android:textSize="20dp"
                         android:textStyle="bold" />
-                    <TextView
-                        android:id="@+id/textChallenge"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="20dp"
-                        android:text="Challenges View"
 
-
-                        />
+                    <com.example.myapplication.ExpandableHeightListView
+                        android:id="@+id/listChallenges"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="40dp"
+                        android:dividerHeight="40px"
+                        android:focusable="false"
+                        android:divider="@android:color/transparent" />
 
 
 
