@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -38,7 +39,7 @@ public class EventChallenge extends AppCompatActivity{
     String imageUrl;
     TextView textTitle;
     TextView textDescription;
-    ExpandableHeightListView list;
+    ExpandableHeightGridView list;
     TextView textChallenge;
     DatabaseReference mDatabase;
     String textChallengeInList;
@@ -123,7 +124,7 @@ public class EventChallenge extends AppCompatActivity{
 
 
     }
-    public static void setListViewHeight(ListView listview){
+    public static void setListViewHeight(GridView listview){
         ListAdapter listAdapter = listview.getAdapter();
         if(listAdapter == null) {
             return;
@@ -139,8 +140,8 @@ public class EventChallenge extends AppCompatActivity{
         }
 
         ViewGroup.LayoutParams params = listview.getLayoutParams();
-        params.height = totalHeight + (listview.getDividerHeight()*(listAdapter.getCount() - 1)) + totalHeight;
-        listview.setLayoutParams(params);
+     //   params.height = totalHeight + (listview.getDividerHeight()*(listAdapter.getCount() - 1)) + totalHeight;
+      //  listview.setLayoutParams(params);
 //listview.setExpand(true);
         //listview.requestLayout();
     }
@@ -167,7 +168,7 @@ public class EventChallenge extends AppCompatActivity{
             textChallenge.setText(bundle.getString("challenge"));
             textChallengeInList=bundle.getString("challenge");
            // textView.setText();
-            list = (ExpandableHeightListView) findViewById(R.id.listChallenges);
+            list = (ExpandableHeightGridView) findViewById(R.id.gridViewChallenges);
             list.setExpanded(true);
             groupChallengesCustomAdapter=new GroupChallengesCustomAdapter(groupChallengeEntityArrayList, this);
             list.setAdapter(groupChallengesCustomAdapter);
