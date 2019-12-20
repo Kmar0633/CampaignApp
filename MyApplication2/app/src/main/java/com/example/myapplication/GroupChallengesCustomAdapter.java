@@ -45,7 +45,7 @@ public class GroupChallengesCustomAdapter extends BaseAdapter {
         ImageView imageView=(ImageView)view.findViewById(R.id.imageChallenge);
         TextView textView=(TextView)view.findViewById(R.id.challenge_id);
         TextView textView1=(TextView)view.findViewById(R.id.action_id);
-        textView.setText(this.groupChallengeEntityArrayList.get(i).getAction_id()+"test");
+        textView.setText(this.groupChallengeEntityArrayList.get(i).getChallenge_id());
         Glide.with(this.activity).load(urlLink+this.groupChallengeEntityArrayList.get(i).getImage_url()).into(imageView);
 
         Log.e("kevin",this.groupChallengeEntityArrayList.get(i).getImage_url() + " action_id");

@@ -62,40 +62,27 @@ public class EventChallenge extends AppCompatActivity{
                     for(DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
 
 
-                       // System.out.println(dataSnapshot1);
+                        // System.out.println(dataSnapshot1);
 
-                        String challengeid = StringFromObject(dataSnapshot1.getKey());
-                        Log.e("kevin",challengeid + " challengeid");
-                        for(DataSnapshot dataSnapshot2 : dataSnapshot1.getChildren()){
-                          final  String action_id = StringFromObject(dataSnapshot2.getKey());
+                        String challengeid;
+                        Log.e("kevin", dataSnapshot1.child("challenge_id").getValue() + " challengeid1");
+                        String groupchallenges_id;
 
+                        final  String challenge_id = StringFromObject(dataSnapshot1.child("challenge_id").getValue());
+                        // final  String groupchallenge_id = StringFromObject(dataSnapshot1.child("groupchallenge_id"));
+                      //  Log.e("kevin", dataSnapshot2 + " challengeid");
+                        //  Log.e("kevin", dataSnapshot.+ " challengeid");
 
-                            mDatabase.child("action/"+action_id).addValueEventListener(new ValueEventListener() {
-                                @Override
-                                public void onDataChange(@NonNull DataSnapshot dataSnapshotaction) {
+                        GroupChallenges groupChallenges = new GroupChallenges();
+                        groupChallenges.setChallenge_id(challenge_id);
 
-                                    String imageUrl = StringFromObject(dataSnapshotaction.child("pict").getValue());
+                        groupChallengeEntityArrayList.add(groupChallenges);
 
-                                    GroupChallenges groupChallengeItemEntity = new GroupChallenges();
-                                    groupChallengeItemEntity.setAction_id(action_id);
-                                    groupChallengeItemEntity.setImage_url(imageUrl);
-                                    Log.e("kevin",action_id + " action_id");
-                                    groupChallengeEntityArrayList.add(groupChallengeItemEntity);
-                                    groupChallengesCustomAdapter.notifyDataSetChanged();
-                                }
-
-                                @Override
-                                public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                                }
-                            });
+                        groupChallengesCustomAdapter.notifyDataSetChanged();
 
 
-
-
-                        }
-                     //   String title = StringFromObject(dataSnapshot1.child("title").getValue());
-                      //  String pict = StringFromObject(dataSnapshot1.child("pict").getValue());
+                        //   String title = StringFromObject(dataSnapshot1.child("title").getValue());
+                        //  String pict = StringFromObject(dataSnapshot1.child("pict").getValue());
 
 
                     }
