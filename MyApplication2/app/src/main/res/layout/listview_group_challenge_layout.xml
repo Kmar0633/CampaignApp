@@ -4,13 +4,14 @@
     android:layout_height="match_parent">
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_width="166dp"
+        android:layout_height="159dp">
 
         <ImageView
             android:id="@+id/imageChallenge"
-            android:layout_width="187dp"
-            android:layout_height="148dp"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:adjustViewBounds="true"
             android:scaleType="fitXY"
 
@@ -20,11 +21,11 @@
 
         <TextView
             android:id="@+id/action_id"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="200dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="30dp"
             android:text="testing"
-            android:layout_marginTop="0dp"
             android:textStyle="bold">
 
         </TextView>
@@ -33,9 +34,8 @@
             android:id="@+id/challenge_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="200dp"
-            android:layout_marginTop="30dp"
-            >
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="40dp">
 
         </TextView>
 

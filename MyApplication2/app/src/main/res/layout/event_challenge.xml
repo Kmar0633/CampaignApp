@@ -98,23 +98,30 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="0dp"
-                        android:layout_marginTop="0dp"
+                        android:layout_marginTop="40dp"
                         android:text="Challenges"
                         android:textSize="20dp"
                         android:textStyle="bold" />
 
-                    <com.example.myapplication.ExpandableHeightListView
-                        android:id="@+id/listChallenges"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                    <com.example.myapplication.ExpandableHeightGridView
+                        android:id="@+id/gridViewChallenges"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="0dp"
                         android:layout_marginTop="40dp"
+                        android:columnWidth="100dp"
+                        android:divider="@android:color/transparent"
                         android:dividerHeight="40px"
                         android:focusable="false"
-                        android:divider="@android:color/transparent" />
 
+                        android:verticalSpacing="5dp"
+                        android:horizontalSpacing="3dp"
+                        android:stretchMode="columnWidth"
+                        android:gravity="left"
 
+                        android:numColumns="2"
 
+                        />
 
 
                 </LinearLayout>

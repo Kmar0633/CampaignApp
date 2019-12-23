@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -28,7 +29,7 @@ public class EventChallengesPage extends AppCompatActivity{
     String imageUrl;
     TextView textTitle;
     TextView textDescription;
-    ExpandableHeightListView list;
+    ExpandableHeightGridView list;
     TextView textChallenge;
     DatabaseReference mDatabase;
     String textChallengeInList;
@@ -90,6 +91,7 @@ public class EventChallengesPage extends AppCompatActivity{
                                         if(dataSnapshot!=null){
                                             for(DataSnapshot datasnapshot2: dataSnapshot.getChildren()){
                                                 Log.e("Kevin",datasnapshot2+"children");
+
                                             }
                                             if(challengesList.contains(challenge_id)) {
                                                 groupChallenges.setAttended(true);
@@ -159,7 +161,7 @@ public class EventChallengesPage extends AppCompatActivity{
 
 
     }
-    public static void setListViewHeight(ListView listview){
+    public static void setListViewHeight(GridView listview){
         ListAdapter listAdapter = listview.getAdapter();
         if(listAdapter == null) {
             return;
@@ -175,8 +177,8 @@ public class EventChallengesPage extends AppCompatActivity{
         }
 
         ViewGroup.LayoutParams params = listview.getLayoutParams();
-        params.height = totalHeight + (listview.getDividerHeight()*(listAdapter.getCount() - 1)) + totalHeight;
-        listview.setLayoutParams(params);
+     //   params.height = totalHeight + (listview.getDividerHeight()*(listAdapter.getCount() - 1)) + totalHeight;
+     //   listview.setLayoutParams(params);
 //listview.setExpand(true);
         //listview.requestLayout();
     }
@@ -206,7 +208,7 @@ public class EventChallengesPage extends AppCompatActivity{
             challengesList=bundle.getStringArrayList("challenges");
            // textView.setText();
             Log.e("Kek",bundle.getString("challenge"));
-            list = (ExpandableHeightListView) findViewById(R.id.listChallenges);
+            list = (ExpandableHeightGridView) findViewById(R.id.gridViewChallenges);
             list.setExpanded(true);
             groupChallengesCustomAdapter=new EventChallengesCustomAdapter(groupChallengeEntityArrayList, this);
             list.setAdapter(groupChallengesCustomAdapter);

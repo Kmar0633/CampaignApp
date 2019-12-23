@@ -8,9 +8,11 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.content.Intent;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -26,12 +28,14 @@ ExpandableHeightListView list;
 ArrayList<EventChallengeEntity> groupChallengeEntityArrayList=new ArrayList<EventChallengeEntity>();
 private DatabaseReference mDatabase;// ...
      EventsCustomAdapter customAdapter;
+     private ImageView profilePic;
+     private TextView profileTitle;
     final ArrayList<String> challengesList=new ArrayList<String>();
      public String prof_id="1000116942";
      LinkedHashMap<String,DataSnapshot> dataSnapshotArrayList=new LinkedHashMap<String,DataSnapshot>();
 public void getData() {
   //  FirebaseApp.initializeApp(this);
-    mDatabase = FirebaseDatabase.getInstance().getReference();
+
 
     ValueEventListener postListener = new ValueEventListener() {
         @Override
@@ -163,14 +167,44 @@ public void getData() {
     mDatabase.child("eventchallenges").addValueEventListener(postListener);
     mDatabase.child("profileeventchallenges/"+prof_id).addValueEventListener(groupChallengesListener);
 }
+    public void getProfileData(){
+        mDatabase.child("profile/"+prof_id).addValueEventListener(new ValueEventListener() {
+            @Override
 
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if(dataSnapshot!=null){
+
+                    for(DataSnapshot datasnapshot2: dataSnapshot.getChildren()){
+
+                        Log.e("Ke",datasnapshot2.getKey());
+
+                    }
+
+
+                }
+                else{
+
+                }
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+
+
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
 
         final Intent intent = new Intent(getApplicationContext(),EventChallengesPage.class);
         super.onCreate(savedInstanceState);
-
+profilePic=(ImageView) findViewById(R.id.imageView);
+profileTitle=(TextView) findViewById(R.id.titleEvent1);
         //mDatabase.intializeApp(this);
 
         setContentView(R.layout.activity_main);
@@ -204,6 +238,8 @@ public void getData() {
         });
 
 intent.putStringArrayListExtra("challenges", challengesList);
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+        getProfileData();
     getData();
 
     }

@@ -46,9 +46,9 @@ public class EventChallengesCustomAdapter extends BaseAdapter {
         view = layoutInflater.inflate(R.layout.listview_group_challenge_layout, null);
         ImageView imageView=(ImageView)view.findViewById(R.id.imageChallenge);
         TextView textView=(TextView)view.findViewById(R.id.challenge_id);
-        TextView textView1=(TextView)view.findViewById(R.id.action_id);
+     //  TextView textView1=(TextView)view.findViewById(R.id.action_id);
         textView.setText(this.groupChallengeEntityArrayList.get(i).getTitle());
-        textView1.setText(this.groupChallengeEntityArrayList.get(i).getDesciption());
+    //   textView1.setText(this.groupChallengeEntityArrayList.get(i).getDesciption());
 
         Glide.with(activity).load(urlLink+groupChallengeEntityArrayList.get(i).getImage_url()).into(imageView);
 if(this.groupChallengeEntityArrayList.get(i).isAttended()) {
