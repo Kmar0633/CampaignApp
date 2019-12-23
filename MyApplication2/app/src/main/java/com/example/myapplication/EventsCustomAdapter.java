@@ -24,12 +24,12 @@ import com.bumptech.glide.Glide;
 import java.util.ArrayList;
 import java.util.Currency;
 
-class CustomAdapter extends BaseAdapter {
-        ArrayList<GroupChallengeEntity> groupChallengeEntityArrayList;
+class EventsCustomAdapter extends BaseAdapter {
+        ArrayList<EventChallengeEntity> groupChallengeEntityArrayList;
 private final Context activity;
 
 
-public CustomAdapter(ArrayList<GroupChallengeEntity> groupChallengeEntityArrayList1, Context activity1){
+public EventsCustomAdapter(ArrayList<EventChallengeEntity> groupChallengeEntityArrayList1, Context activity1){
         this.activity=activity1;
         this.groupChallengeEntityArrayList=groupChallengeEntityArrayList1;
         }

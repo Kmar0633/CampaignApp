@@ -1,43 +1,33 @@
 package com.example.myapplication;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
-import android.nfc.Tag;
-import android.os.Bundle;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View.OnClickListener;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.Spinner;
 import android.content.Intent;
-import android.widget.Toast;
+
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
-import java.util.Currency;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.TextView;
 
-import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.database.core.utilities.Utilities;
 
 public class MainActivity extends AppCompatActivity {
 ExpandableHeightListView list;
-ArrayList<GroupChallengeEntity> groupChallengeEntityArrayList=new ArrayList<GroupChallengeEntity>();
+ArrayList<EventChallengeEntity> groupChallengeEntityArrayList=new ArrayList<EventChallengeEntity>();
 private DatabaseReference mDatabase;// ...
-     CustomAdapter customAdapter;
+     EventsCustomAdapter customAdapter;
+    final ArrayList<String> challengesList=new ArrayList<String>();
+     public String prof_id="1000116942";
      LinkedHashMap<String,DataSnapshot> dataSnapshotArrayList=new LinkedHashMap<String,DataSnapshot>();
 public void getData() {
   //  FirebaseApp.initializeApp(this);
@@ -51,29 +41,89 @@ public void getData() {
             // ...
             if(dataSnapshot.getValue()!=null){
                 for(DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
-                    GroupChallengeEntity groupChallengeEntity = new GroupChallengeEntity();
+                    EventChallengeEntity groupChallengeEntity = new EventChallengeEntity();
 
 
                         if(dataSnapshotArrayList.containsKey(dataSnapshot1.getKey())) {
                             groupChallengeEntity.setDataSnapshot(dataSnapshotArrayList.get(dataSnapshot1.getKey()));
                             groupChallengeEntity.setKeyID(dataSnapshot1.getKey());
+                            String description = StringFromObject(dataSnapshot1.child("desc").getValue());
+                            String title = StringFromObject(dataSnapshot1.child("title").getValue());
+                            String pict = StringFromObject(dataSnapshot1.child("pict").getValue());
+
+                            groupChallengeEntity.setDescription(description);
+                            groupChallengeEntity.setTitle(title);
+                            groupChallengeEntity.setImageUrl(pict);
+                            groupChallengeEntityArrayList.add(groupChallengeEntity);
                         }
 
-                    String description = StringFromObject(dataSnapshot1.child("desc").getValue());
-                    String title = StringFromObject(dataSnapshot1.child("title").getValue());
-                    String pict = StringFromObject(dataSnapshot1.child("pict").getValue());
 
-                    groupChallengeEntity.setDescription(description);
-                    groupChallengeEntity.setTitle(title);
-                    groupChallengeEntity.setImageUrl(pict);
-                    groupChallengeEntityArrayList.add(groupChallengeEntity);
                 }
 
 
             }
+            mDatabase.child("profilechallengesactions/"+prof_id).addValueEventListener(new ValueEventListener() {
+                @Override
+
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    if(dataSnapshot!=null){
+
+                        for(DataSnapshot datasnapshot2: dataSnapshot.getChildren()){
+
+
+
+                        }
+
+                    }
+                    else{
+                        for(DataSnapshot datasnapshot2: dataSnapshot.getChildren()){
+
+                            challengesList.add(datasnapshot2.getKey());
+
+                        }
+                    }
+
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
+
 
 
             customAdapter.notifyDataSetChanged();
+            mDatabase.child("profilechallengesactions/"+prof_id).addValueEventListener(new ValueEventListener() {
+                @Override
+
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    if(dataSnapshot!=null){
+
+                        for(DataSnapshot datasnapshot2: dataSnapshot.getChildren()){
+
+                            challengesList.add(datasnapshot2.getKey());
+
+                        }
+
+                    }
+                    else{
+                        for(DataSnapshot datasnapshot2: dataSnapshot.getChildren()){
+
+                            challengesList.add(datasnapshot2.getKey());
+
+                        }
+                    }
+
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
+
+
         }
 
         @Override
@@ -91,7 +141,9 @@ public void getData() {
             // ...
             if(dataSnapshot.getValue()!=null){
                 for(DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
-                    dataSnapshotArrayList.put(dataSnapshot1.getKey(),dataSnapshot1)     ;           }
+                    dataSnapshotArrayList.put(dataSnapshot1.getKey(),dataSnapshot1)     ;
+
+                }
 
 
             }
@@ -109,14 +161,14 @@ public void getData() {
     };
 
     mDatabase.child("eventchallenges").addValueEventListener(postListener);
-    mDatabase.child("groupchallenges").addValueEventListener(groupChallengesListener);
+    mDatabase.child("profileeventchallenges/"+prof_id).addValueEventListener(groupChallengesListener);
 }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
 
-
+        final Intent intent = new Intent(getApplicationContext(),EventChallengesPage.class);
         super.onCreate(savedInstanceState);
 
         //mDatabase.intializeApp(this);
@@ -125,29 +177,35 @@ public void getData() {
         list = (ExpandableHeightListView) findViewById(R.id.list);
         //EventChallenge eventChallenge= new EventChallenge(this
         list.setExpanded(true);
-        customAdapter=new CustomAdapter(groupChallengeEntityArrayList, this);
+        customAdapter=new EventsCustomAdapter(groupChallengeEntityArrayList, this);
         setListViewHeight(list);
 
         list.setAdapter(customAdapter);
+
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(getApplicationContext(),EventChallenge.class);
+
 
                 intent.putExtra("photo event",groupChallengeEntityArrayList.get(i).getImageUrl());
                 intent.putExtra("title",groupChallengeEntityArrayList.get(i).getTitle());
                 intent.putExtra("description",groupChallengeEntityArrayList.get(i).getDescription());
                 if (groupChallengeEntityArrayList.get(i).getDataSnapshot()!=null) {
                     intent.putExtra("challenge", groupChallengeEntityArrayList.get(i).getKeyID());
+                    intent.putExtra("prof_id",prof_id);
+
                 }
-                //intent.putExtra("name",groupChallengeEntityArrayList.get(i));
+
+
                 startActivity(intent);
 
 
             }
         });
 
+intent.putStringArrayListExtra("challenges", challengesList);
     getData();
+
     }
     public static void setListViewHeight(ListView listview){
         ListAdapter listAdapter = listview.getAdapter();

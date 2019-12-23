@@ -2,6 +2,8 @@ package com.example.myapplication;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,12 +16,12 @@ import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
-public class GroupChallengesCustomAdapter extends BaseAdapter {
-    ArrayList<GroupChallenges> groupChallengeEntityArrayList;
+public class EventChallengesCustomAdapter extends BaseAdapter {
+    ArrayList<ActionEntity> groupChallengeEntityArrayList;
     private final Context activity;
 
-    private String urlLink="https://static-images.campaign.com/?t=act&w=500&crop=true&file=";
-    public GroupChallengesCustomAdapter(ArrayList<GroupChallenges> groupChallengeEntityArrayList1, Context activity1){
+    private String urlLink="https://campaigndata-campaign.appspot.com/?t=upd&w=500&crop=true&file=";
+    public EventChallengesCustomAdapter(ArrayList<ActionEntity> groupChallengeEntityArrayList1, Context activity1){
         this.activity=activity1;
         this.groupChallengeEntityArrayList=groupChallengeEntityArrayList1;
     }
@@ -45,11 +47,14 @@ public class GroupChallengesCustomAdapter extends BaseAdapter {
         ImageView imageView=(ImageView)view.findViewById(R.id.imageChallenge);
         TextView textView=(TextView)view.findViewById(R.id.challenge_id);
         TextView textView1=(TextView)view.findViewById(R.id.action_id);
-        textView.setText(this.groupChallengeEntityArrayList.get(i).getChallenge_id());
-        Glide.with(this.activity).load(urlLink+this.groupChallengeEntityArrayList.get(i).getImage_url()).into(imageView);
+        textView.setText(this.groupChallengeEntityArrayList.get(i).getTitle());
+        textView1.setText(this.groupChallengeEntityArrayList.get(i).getDesciption());
 
-        Log.e("kevin",this.groupChallengeEntityArrayList.get(i).getImage_url() + " action_id");
-        Log.e("kevin",this.groupChallengeEntityArrayList.get(i).getImage_url() + " action_id");
+        Glide.with(activity).load(urlLink+groupChallengeEntityArrayList.get(i).getImage_url()).into(imageView);
+if(this.groupChallengeEntityArrayList.get(i).isAttended()) {
+    imageView.setColorFilter(Color.parseColor("#70FFFF80"), PorterDuff.Mode.MULTIPLY);
+}
+
         //textView1.setText(this.groupChallengeEntityArrayList.get(i).getDescription());
      //   textView.setText(this.groupChallengeEntityArrayList.get(i).getTitle());
         return view;

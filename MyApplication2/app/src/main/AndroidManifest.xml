@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         >
-        <activity android:name=".EventChallenge">
+        <activity android:name=".EventChallengesPage">
         </activity>
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -21,6 +21,8 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".ActionsPage">
         </activity>
     </application>
 

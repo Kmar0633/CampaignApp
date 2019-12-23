@@ -1,8 +1,26 @@
 package com.example.myapplication;
 
-public class GroupChallenges {
+public class ActionEntity {
     String action_id;
 
+    public boolean isAttended() {
+        return attended;
+    }
+
+    public void setAttended(boolean attended) {
+        this.attended = attended;
+    }
+
+    boolean attended;
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    String title;
     public String getDesciption() {
         return desciption;
     }

@@ -2,7 +2,7 @@ package com.example.myapplication;
 
 import com.google.firebase.database.DataSnapshot;
 
-public class GroupChallengeEntity {
+public class EventChallengeEntity {
     String title;
 
     public String getImageUrl() {
