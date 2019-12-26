@@ -66,7 +66,6 @@ public class ActionsPage extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
 
-
             }
         });
 getActionsData();

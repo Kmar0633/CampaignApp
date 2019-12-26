@@ -216,8 +216,9 @@ public class EventChallengesPage extends AppCompatActivity{
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                     Intent intent = new Intent(getApplicationContext(),ActionsPage.class);
                     intent.putExtra("actionTitle",groupChallengeEntityArrayList.get(i).getTitle());
-                //    intent.putExtra("actionDescription",groupChallengeEntityArrayList.get(i).getDesciption());
+                    intent.putExtra("actionDescription",groupChallengeEntityArrayList.get(i).getDesciption());
                     intent.putExtra("actionImage",groupChallengeEntityArrayList.get(i).getImage_url());
+
                     intent.putExtra("prof_id", prof_id);
                    if(groupChallengeEntityArrayList.get(i).isAttended()){
                        intent.putExtra("prof_id", prof_id);
