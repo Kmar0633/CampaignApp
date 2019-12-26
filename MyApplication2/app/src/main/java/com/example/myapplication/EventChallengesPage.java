@@ -81,7 +81,6 @@ public class EventChallengesPage extends AppCompatActivity{
                                         ActionEntity groupChallenges = new ActionEntity();
                                         groupChallenges.setTitle(title);
                                         groupChallenges.setDesciption(desc);
-                                        groupChallenges.setChallenge_id(challenge_id);
 
 
                                         groupChallenges.setImage_url(imageUrl);
@@ -222,6 +221,8 @@ public class EventChallengesPage extends AppCompatActivity{
                     intent.putExtra("prof_id", prof_id);
                    if(groupChallengeEntityArrayList.get(i).isAttended()){
                        intent.putExtra("prof_id", prof_id);
+
+                       intent.putExtra("challenge_id", groupChallengeEntityArrayList.get(i).getChallenge_id());
                        startActivity(intent);
                    }
                    else{

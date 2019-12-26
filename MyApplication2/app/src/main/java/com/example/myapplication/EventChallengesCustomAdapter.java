@@ -55,8 +55,7 @@ if(this.groupChallengeEntityArrayList.get(i).isAttended()) {
     imageView.setColorFilter(Color.parseColor("#70FFFF80"), PorterDuff.Mode.MULTIPLY);
 }
 
-        //textView1.setText(this.groupChallengeEntityArrayList.get(i).getDescription());
-     //   textView.setText(this.groupChallengeEntityArrayList.get(i).getTitle());
+      
         return view;
     }
 

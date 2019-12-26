@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,11 +18,11 @@ import com.bumptech.glide.Glide;
 import java.util.ArrayList;
 
 public class ChallengeActionsCustomAdapter extends BaseAdapter {
-    ArrayList<ActionEntity> groupChallengeEntityArrayList;
+    ArrayList<ActionChallengeEntity> groupChallengeEntityArrayList;
     private final Context activity;
-
+private Bundle bundle;
     private String urlLink="https://campaigndata-campaign.appspot.com/?t=upd&w=500&crop=true&file=";
-    public ChallengeActionsCustomAdapter(ArrayList<ActionEntity> groupChallengeEntityArrayList1, Context activity1){
+    public ChallengeActionsCustomAdapter(ArrayList<ActionChallengeEntity> groupChallengeEntityArrayList1, Context activity1){
         this.activity=activity1;
         this.groupChallengeEntityArrayList=groupChallengeEntityArrayList1;
     }
@@ -42,21 +43,16 @@ public class ChallengeActionsCustomAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
+
         LayoutInflater layoutInflater=(LayoutInflater) activity.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
-        view = layoutInflater.inflate(R.layout.listview_group_challenge_layout, null);
-        ImageView imageView=(ImageView)view.findViewById(R.id.imageChallenge);
-        TextView textView=(TextView)view.findViewById(R.id.challenge_id);
-        //  TextView textView1=(TextView)view.findViewById(R.id.action_id);
-        textView.setText(this.groupChallengeEntityArrayList.get(i).getTitle());
-        //   textView1.setText(this.groupChallengeEntityArrayList.get(i).getDesciption());
+        view = layoutInflater.inflate(R.layout.listview_action_layout, null);
+        TextView textView=(TextView)view.findViewById(R.id.titleAction);
+        TextView descriptionAction=(TextView)view.findViewById(R.id.descriptionAction);
+        textView.setText(groupChallengeEntityArrayList.get(i).getActionTitle());
+        descriptionAction.setText(groupChallengeEntityArrayList.get(i).getActionDescrip());
+ImageView imageAction=(ImageView)view.findViewById(R.id.imageAction);
+        Glide.with(activity).load(groupChallengeEntityArrayList.get(i).getImageUrl()).into(imageAction);
 
-        Glide.with(activity).load(urlLink+groupChallengeEntityArrayList.get(i).getImage_url()).into(imageView);
-        if(this.groupChallengeEntityArrayList.get(i).isAttended()) {
-            imageView.setColorFilter(Color.parseColor("#70FFFF80"), PorterDuff.Mode.MULTIPLY);
-        }
-
-        //textView1.setText(this.groupChallengeEntityArrayList.get(i).getDescription());
-        //   textView.setText(this.groupChallengeEntityArrayList.get(i).getTitle());
         return view;
     }
 
