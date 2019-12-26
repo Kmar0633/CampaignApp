@@ -3,6 +3,24 @@ package com.example.myapplication;
 public class ActionEntity {
     String action_id;
 
+    public boolean isVideo() {
+        return isVideo;
+    }
+
+    public void setVideo(boolean video) {
+        isVideo = video;
+    }
+
+    boolean isVideo;
+    public String getVideoUrl() {
+        return videoUrl;
+    }
+
+    public void setVideoUrl(String videoUrl) {
+        this.videoUrl = videoUrl;
+    }
+
+    String videoUrl;
     public boolean isAttended() {
         return attended;
     }

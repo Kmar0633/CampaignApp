@@ -70,7 +70,9 @@ public class EventChallengesPage extends AppCompatActivity{
                              final   String imageUrl = StringFromObject(dataSnapshotaction.child("pict/pict1/attfile").getValue());
                                 final    String title = StringFromObject(dataSnapshotaction.child("title").getValue());
                                 final     String desc = StringFromObject(dataSnapshotaction.child("desc").getValue());
+                                final String isVideo=StringFromObject(dataSnapshotaction.child("pict/pict1/is_video").getValue());
 
+                                final   String videoUrl = StringFromObject(dataSnapshotaction.child("pict/pict1/video").getValue());
 
 
                                 mDatabase.child("profilechallengesactions/"+prof_id+"/"+challenge_id).addValueEventListener(new ValueEventListener() {
@@ -81,8 +83,15 @@ public class EventChallengesPage extends AppCompatActivity{
                                         ActionEntity groupChallenges = new ActionEntity();
                                         groupChallenges.setTitle(title);
                                         groupChallenges.setDesciption(desc);
+                                        groupChallenges.setVideoUrl(videoUrl);
 
-
+                                        if(isVideo.equals("1")){
+                                            groupChallenges.setVideo(true);
+                                         //   Log.e("ler",isVideo);
+                                        }
+                                        else if(isVideo.equals("0")){
+                                            groupChallenges.setVideo(false);
+                                        }
                                         groupChallenges.setImage_url(imageUrl);
 
                                         if(dataSnapshot!=null){

@@ -18,6 +18,19 @@
             >
 
         </ImageView>
+        <ImageView
+            android:id="@+id/playIconimageChallenge1"
+
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="80dp"
+
+            >
+
+        </ImageView>
 
         <TextView
             android:id="@+id/challengeName"

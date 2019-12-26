@@ -46,13 +46,19 @@ public class EventChallengesCustomAdapter extends BaseAdapter {
         view = layoutInflater.inflate(R.layout.listview_group_challenge_layout, null);
         ImageView imageView=(ImageView)view.findViewById(R.id.imageChallenge);
         TextView textView=(TextView)view.findViewById(R.id.challenge_id);
-
+        ImageView playIconAction=(ImageView)view.findViewById(R.id.playIconimageChallenge1);
         textView.setText(this.groupChallengeEntityArrayList.get(i).getTitle());
         TextView challengeName=(TextView)view.findViewById(R.id.challengeName);
-       // challengeName.setText(this.groupChallengeEntityArrayList.get(i).getDesciption());
         textView.setText(this.groupChallengeEntityArrayList.get(i).getTitle());
         Glide.with(activity).load(urlLink+groupChallengeEntityArrayList.get(i).getImage_url()).into(imageView);
-if(this.groupChallengeEntityArrayList.get(i).isAttended()) {
+      //  Log.e("turn",String.valueOf(groupChallengeEntityArrayList.get(i).isVideo()));
+          Log.e("turn",String.valueOf(groupChallengeEntityArrayList.get(i).getAction_id()));
+
+        if(this.groupChallengeEntityArrayList.get(i).isVideo()==true){
+            Glide.with(activity).load("https://cdn4.iconfinder.com/data/icons/round-buttons/512/blue_play.png").into(playIconAction);
+
+
+        }if(this.groupChallengeEntityArrayList.get(i).isAttended()) {
     imageView.setColorFilter(Color.parseColor("#70FFFF80"), PorterDuff.Mode.MULTIPLY);
 }
 
