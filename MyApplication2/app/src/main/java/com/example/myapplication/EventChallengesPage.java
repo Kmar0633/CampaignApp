@@ -62,8 +62,7 @@ public class EventChallengesPage extends AppCompatActivity{
                         final  String challenge_id = StringFromObject(dataSnapshot1.child("challenge_id").getValue());
 
                         // final  String groupchallenge_id = StringFromObject(dataSnapshot1.child("groupchallenge_id"));
-                      //  Log.e("kevin", dataSnapshot2 + " challengeid");
-                        //  Log.e("kevin", dataSnapshot.+ " challengeid");
+
                         mDatabase.child("updates/"+challenge_id).addValueEventListener(new ValueEventListener() {
                             @Override
                             public void onDataChange(@NonNull DataSnapshot dataSnapshotaction) {
@@ -83,15 +82,14 @@ public class EventChallengesPage extends AppCompatActivity{
                                         groupChallenges.setTitle(title);
                                         groupChallenges.setDesciption(desc);
                                         groupChallenges.setChallenge_id(challenge_id);
-                                        Log.e("joe",title+"   "+challenge_id);
 
-                                       // Log.e("challenge_id",challengesList+"starchallengelist");
+
                                         groupChallenges.setImage_url(imageUrl);
 
                                         if(dataSnapshot!=null){
                                             for(DataSnapshot datasnapshot2: dataSnapshot.getChildren()){
-                                                Log.e("Kevin",datasnapshot2+"children");
-
+                                              //  Log.e("k",StringFromObject(datasnapshot2.child("action_id").getValue()));
+                                                groupChallenges.setAction_id(StringFromObject(datasnapshot2.getValue()));
                                             }
                                             if(challengesList.contains(challenge_id)) {
                                                 groupChallenges.setAttended(true);
@@ -207,7 +205,6 @@ public class EventChallengesPage extends AppCompatActivity{
             textChallengeInList=bundle.getString("challenge");
             challengesList=bundle.getStringArrayList("challenges");
            // textView.setText();
-            Log.e("Kek",bundle.getString("challenge"));
             list = (ExpandableHeightGridView) findViewById(R.id.gridViewChallenges);
             list.setExpanded(true);
             groupChallengesCustomAdapter=new EventChallengesCustomAdapter(groupChallengeEntityArrayList, this);
@@ -226,10 +223,8 @@ public class EventChallengesPage extends AppCompatActivity{
                    if(groupChallengeEntityArrayList.get(i).isAttended()){
                        intent.putExtra("prof_id", prof_id);
                        startActivity(intent);
-                       Log.e("kevin"," attended");
                    }
                    else{
-                       Log.e("kevin","Not attended");
                    }
 
 

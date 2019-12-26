@@ -3,6 +3,7 @@ package com.example.myapplication;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -17,6 +18,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
+import com.bumptech.glide.Glide;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -30,10 +32,14 @@ private DatabaseReference mDatabase;// ...
      EventsCustomAdapter customAdapter;
      private ImageView profilePic;
      private TextView profileTitle;
+    private String urlLink="https://campaigndata-campaign.appspot.com/?t=upd&w=500&crop=true&file=";
+    private TextView profileDescrp;
+
+    private String imageUrl="e";
     final ArrayList<String> challengesList=new ArrayList<String>();
      public String prof_id="1000116942";
      LinkedHashMap<String,DataSnapshot> dataSnapshotArrayList=new LinkedHashMap<String,DataSnapshot>();
-public void getData() {
+public void getEventChallengesData() {
   //  FirebaseApp.initializeApp(this);
 
 
@@ -111,13 +117,7 @@ public void getData() {
                         }
 
                     }
-                    else{
-                        for(DataSnapshot datasnapshot2: dataSnapshot.getChildren()){
 
-                            challengesList.add(datasnapshot2.getKey());
-
-                        }
-                    }
 
                 }
 
@@ -137,35 +137,9 @@ public void getData() {
             // ...
         }
     };
-    ValueEventListener groupChallengesListener = new ValueEventListener() {
-        @Override
-        public void onDataChange(DataSnapshot dataSnapshot) {
-            // Get Post object and use the values to update the UI
-            //GroupChallengeEntity post = dataSnapshot.getValue(Post.class);
-            // ...
-            if(dataSnapshot.getValue()!=null){
-                for(DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
-                    dataSnapshotArrayList.put(dataSnapshot1.getKey(),dataSnapshot1)     ;
 
-                }
-
-
-            }
-
-
-
-        }
-
-        @Override
-        public void onCancelled(DatabaseError databaseError) {
-            // Getting Post failed, log a message
-            Log.w("Kevin", "loadPost:onCancelled", databaseError.toException());
-            // ...
-        }
-    };
 
     mDatabase.child("eventchallenges").addValueEventListener(postListener);
-    mDatabase.child("profileeventchallenges/"+prof_id).addValueEventListener(groupChallengesListener);
 }
     public void getProfileData(){
         mDatabase.child("profile/"+prof_id).addValueEventListener(new ValueEventListener() {
@@ -176,7 +150,30 @@ public void getData() {
 
                     for(DataSnapshot datasnapshot2: dataSnapshot.getChildren()){
 
-                        Log.e("Ke",datasnapshot2.getKey());
+
+                    if(datasnapshot2.getKey().equals("firstname")) {
+                        profileTitle = (TextView) findViewById(R.id.profileName);
+
+                        profileTitle.setText(StringFromObject(datasnapshot2.getValue()));
+                    }
+
+                        else if(datasnapshot2.getKey().equals("descrip")) {
+
+                        profileDescrp = (TextView) findViewById(R.id.descriptionView);
+
+                        profileDescrp.setText(StringFromObject(datasnapshot2.getValue()));
+                    }
+                    else if(datasnapshot2.getKey().equals("avatar")) {
+                        profilePic = (ImageView) findViewById(R.id.imageView);
+                        Log.e("k",datasnapshot2.getKey());
+                        imageUrl = urlLink + StringFromObject(datasnapshot2.getValue());
+                        String imageLink =urlLink + StringFromObject(datasnapshot2.getValue());
+                        imageUrl=imageLink;
+                        Log.e("k",imageUrl);
+                        Glide.with(MainActivity.this).load(imageUrl).into(profilePic);
+                    }
+                         //   Glide.with(this).load(urlLink+StringFromObject(datasnapshot2.getValue())).into(profilePic);
+
 
                     }
 
@@ -200,16 +197,20 @@ public void getData() {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-
+        mDatabase = FirebaseDatabase.getInstance().getReference();
         final Intent intent = new Intent(getApplicationContext(),EventChallengesPage.class);
         super.onCreate(savedInstanceState);
-profilePic=(ImageView) findViewById(R.id.imageView);
-profileTitle=(TextView) findViewById(R.id.titleEvent1);
-        //mDatabase.intializeApp(this);
+//profilePic=(ImageView) findViewById(R.id.imageView);
+
+
+
+        getProfileData();
+
+
 
         setContentView(R.layout.activity_main);
         list = (ExpandableHeightListView) findViewById(R.id.list);
-        //EventChallenge eventChallenge= new EventChallenge(this
+
         list.setExpanded(true);
         customAdapter=new EventsCustomAdapter(groupChallengeEntityArrayList, this);
         setListViewHeight(list);
@@ -238,11 +239,45 @@ profileTitle=(TextView) findViewById(R.id.titleEvent1);
         });
 
 intent.putStringArrayListExtra("challenges", challengesList);
-        mDatabase = FirebaseDatabase.getInstance().getReference();
-        getProfileData();
-    getData();
+
+
+    getEventChallengesData();
+    getProfileEventChallengesData();
+    }
+
+
+
+    public void getProfileEventChallengesData(){
+        ValueEventListener groupChallengesListener = new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // Get Post object and use the values to update the UI
+                //GroupChallengeEntity post = dataSnapshot.getValue(Post.class);
+                // ...
+                if(dataSnapshot.getValue()!=null){
+                    for(DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
+                        dataSnapshotArrayList.put(dataSnapshot1.getKey(),dataSnapshot1)     ;
+
+                    }
+
+
+                }
+
+
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                // Getting Post failed, log a message
+                Log.w("Kevin", "loadPost:onCancelled", databaseError.toException());
+                // ...
+            }
+        };
+        mDatabase.child("profileeventchallenges/"+prof_id).addValueEventListener(groupChallengesListener);
 
     }
+
     public static void setListViewHeight(ListView listview){
         ListAdapter listAdapter = listview.getAdapter();
         if(listAdapter == null) {
