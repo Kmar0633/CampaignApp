@@ -52,6 +52,7 @@ private String videoUrl="";
     Bundle bundle;
     String challenge_id;
     Uri videouri;
+    Boolean isAVideo=false;
     private DatabaseReference mDatabase;
     ArrayList<ActionChallengeEntity> actionEntityArrayList;
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,11 +65,11 @@ private String videoUrl="";
         actionImage=(ImageView)findViewById(R.id.actionImage);
         actionDescription=(TextView) findViewById(R.id.actionDescription);
         actionTitle=(TextView) findViewById(R.id.actionTitle);
-
+        exoPlayerView=(SimpleExoPlayerView)findViewById(R.id.exoplayerview);
         try{
 
             if(bundle.getBoolean("isVideo")){
-exoPlayerView=(SimpleExoPlayerView)findViewById(R.id.exoplayerview);
+                isAVideo=true;
                 BandwidthMeter bandwidthMeter=new DefaultBandwidthMeter();
                 TrackSelector trackSelector=new DefaultTrackSelector(new AdaptiveTrackSelection.Factory(bandwidthMeter));
                 videoUrl="https://campaigndata-campaign.appspot.com/?t=vidupd&file="+bundle.getString("videoUrl");
@@ -89,6 +90,7 @@ exoPlayerView=(SimpleExoPlayerView)findViewById(R.id.exoplayerview);
                 Log.e("chec",String.valueOf(bundle.getBoolean("isVideo")));
             }
             else if(!bundle.getBoolean("isVideo")){
+                exoPlayerView.setVisibility(View.GONE);
                 Glide.with(this).load(urlLink+bundle.getString("actionImage")).into(actionImage);
             }
 
@@ -141,9 +143,15 @@ getActionsData();
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
-        exoPlayer.setPlayWhenReady(false);
-        Log.e("Stop","Stop");
+
+            super.onBackPressed();
+            if (isAVideo==true) {
+                exoPlayer.setPlayWhenReady(false);
+            }
+
+            Log.e("Stop", "Stop");
+
+
     }
 
     public void getActionsData(){
