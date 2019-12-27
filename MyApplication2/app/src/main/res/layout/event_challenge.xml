@@ -26,21 +26,52 @@
                     android:layout_width="400dp"
                     android:layout_height="352dp"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="150dp"
+                    android:layout_marginTop="50dp"
 
                     android:scaleType="fitXY">
 
                 </ImageView>
+
                 <ImageView
                     android:id="@+id/playIconImageChallenge"
                     android:layout_width="400dp"
                     android:layout_height="352dp"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="150dp"
+                    android:layout_marginTop="00dp"
 
                     android:scaleType="fitXY">
 
                 </ImageView>
+                <TextView
+                    android:id="@+id/challengeTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-800dp"
+                    android:layout_marginTop="400dp"
+
+
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/challengeDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-400dp"
+                    android:layout_marginTop="300dp"
+
+
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/eventDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-400dp"
+                    android:layout_marginTop="550dp"
+
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
                 <LinearLayout
                     android:id="@+id/middlelayout"
                     android:layout_width="match_parent"
@@ -50,37 +81,11 @@
                     android:orientation="horizontal"
                     android:weightSum="1">
 
-                    <TextView
-                        android:id="@+id/challengeTitle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginTop="70dp"
 
 
-                        android:textSize="20dp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/challengeDescription"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="-400dp"
-                        android:layout_marginTop="120dp"
 
 
-                        android:textSize="20dp"
-                        android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/eventDescription"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="-400dp"
-                        android:layout_marginTop="160dp"
-
-                        android:textSize="20dp"
-                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/textChallenge"
@@ -97,11 +102,12 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/middlelayout"
                     android:layout_marginLeft="-400dp"
                     android:layout_marginTop="800dp"
-                    android:layout_below="@id/middlelayout"
-                    android:orientation="vertical"
-                    android:layout_height="wrap_content">
+                    android:orientation="vertical">
+
                     <TextView
                         android:id="@+id/textView4"
                         android:layout_width="wrap_content"
@@ -123,12 +129,12 @@
                         android:dividerHeight="40px"
                         android:focusable="false"
 
-                        android:verticalSpacing="5dp"
-                        android:horizontalSpacing="3dp"
-                        android:stretchMode="columnWidth"
                         android:gravity="left"
-
+                        android:horizontalSpacing="3dp"
                         android:numColumns="2"
+                        android:stretchMode="columnWidth"
+
+                        android:verticalSpacing="5dp"
 
                         />
 

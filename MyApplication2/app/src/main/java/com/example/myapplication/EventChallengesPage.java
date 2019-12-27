@@ -206,6 +206,7 @@ public class EventChallengesPage extends AppCompatActivity{
             Glide.with(this).load(bundle.getString("photo event")).into(eventImage);
             bundle.getString("description");
             bundle.getString("title");
+Log.e("e",bundle.getString("description"));
             textTitle.setText(bundle.getString("title"));
             textDescription.setText(bundle.getString("description"));
             textChallenge.setText(bundle.getString("challenge"));
@@ -226,7 +227,9 @@ public class EventChallengesPage extends AppCompatActivity{
                     intent.putExtra("actionTitle",groupChallengeEntityArrayList.get(i).getTitle());
                     intent.putExtra("actionDescription",groupChallengeEntityArrayList.get(i).getDesciption());
                     intent.putExtra("actionImage",groupChallengeEntityArrayList.get(i).getImage_url());
+
                     intent.putExtra("isVideo",groupChallengeEntityArrayList.get(i).isVideo());
+                    Log.e("k",Boolean.toString(groupChallengeEntityArrayList.get(i).isVideo()));
                     intent.putExtra("videoUrl",groupChallengeEntityArrayList.get(i).getVideoUrl());
                     intent.putExtra("prof_id", prof_id);
                    if(groupChallengeEntityArrayList.get(i).isAttended()){

@@ -45,6 +45,7 @@ public class ActionsPage extends AppCompatActivity {
     TextView actionDescription;
     ImageView actionImage;
     SimpleExoPlayerView exoPlayerView;
+    static boolean active = false;
     SimpleExoPlayer exoPlayer;
 private String videoUrl="";
     String prof_id;
@@ -63,10 +64,11 @@ private String videoUrl="";
         actionImage=(ImageView)findViewById(R.id.actionImage);
         actionDescription=(TextView) findViewById(R.id.actionDescription);
         actionTitle=(TextView) findViewById(R.id.actionTitle);
-        exoPlayerView=(SimpleExoPlayerView)findViewById(R.id.exoplayerview);
+
         try{
 
             if(bundle.getBoolean("isVideo")){
+exoPlayerView=(SimpleExoPlayerView)findViewById(R.id.exoplayerview);
                 BandwidthMeter bandwidthMeter=new DefaultBandwidthMeter();
                 TrackSelector trackSelector=new DefaultTrackSelector(new AdaptiveTrackSelection.Factory(bandwidthMeter));
                 videoUrl="https://campaigndata-campaign.appspot.com/?t=vidupd&file="+bundle.getString("videoUrl");
@@ -77,12 +79,16 @@ private String videoUrl="";
                 MediaSource mediaSource=new ExtractorMediaSource(videouri,defaultHttpDataSourceFactory,extractorsFactory,null,null);
                 exoPlayerView.setPlayer(exoPlayer);
                 exoPlayer.prepare(mediaSource);
+                if(active==true){
                 exoPlayer.setPlayWhenReady(true);
+                    Log.e("Start","Start");
+                }
+
                 Log.e("MainActivity","exoplayer error");
                 Log.e("check vid",bundle.getString("videoUrl"));
                 Log.e("chec",String.valueOf(bundle.getBoolean("isVideo")));
             }
-            else{
+            else if(!bundle.getBoolean("isVideo")){
                 Glide.with(this).load(urlLink+bundle.getString("actionImage")).into(actionImage);
             }
 
@@ -118,6 +124,28 @@ private String videoUrl="";
 getActionsData();
 
     }
+    @Override
+    public void onStart() {
+        super.onStart();
+        active = true;
+
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        active = false;
+
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        exoPlayer.setPlayWhenReady(false);
+        Log.e("Stop","Stop");
+    }
+
     public void getActionsData(){
         mDatabase.child("profilechallengesactions/"+prof_id+"/"+challenge_id).addValueEventListener(new ValueEventListener() {
             @Override
