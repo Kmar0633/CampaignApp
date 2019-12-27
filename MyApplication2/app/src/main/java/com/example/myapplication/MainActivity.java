@@ -165,11 +165,9 @@ public void getEventChallengesData() {
                     }
                     else if(datasnapshot2.getKey().equals("avatar")) {
                         profilePic = (ImageView) findViewById(R.id.imageView);
-                        Log.e("k",datasnapshot2.getKey());
                         imageUrl = urlLink + StringFromObject(datasnapshot2.getValue());
                         String imageLink =urlLink + StringFromObject(datasnapshot2.getValue());
                         imageUrl=imageLink;
-                        Log.e("k",imageUrl);
                         Glide.with(MainActivity.this).load(imageUrl).into(profilePic);
                     }
                          //   Glide.with(this).load(urlLink+StringFromObject(datasnapshot2.getValue())).into(profilePic);

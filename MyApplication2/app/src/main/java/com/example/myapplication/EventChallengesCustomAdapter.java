@@ -52,7 +52,6 @@ public class EventChallengesCustomAdapter extends BaseAdapter {
         textView.setText(this.groupChallengeEntityArrayList.get(i).getTitle());
         Glide.with(activity).load(urlLink+groupChallengeEntityArrayList.get(i).getImage_url()).into(imageView);
       //  Log.e("turn",String.valueOf(groupChallengeEntityArrayList.get(i).isVideo()));
-          Log.e("turn",String.valueOf(groupChallengeEntityArrayList.get(i).getAction_id()));
 
         if(this.groupChallengeEntityArrayList.get(i).isVideo()==true){
             Glide.with(activity).load("https://cdn4.iconfinder.com/data/icons/round-buttons/512/blue_play.png").into(playIconAction);

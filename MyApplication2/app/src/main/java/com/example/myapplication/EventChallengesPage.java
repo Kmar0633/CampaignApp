@@ -96,7 +96,6 @@ public class EventChallengesPage extends AppCompatActivity{
 
                                         if(dataSnapshot!=null){
                                             for(DataSnapshot datasnapshot2: dataSnapshot.getChildren()){
-                                              //  Log.e("k",StringFromObject(datasnapshot2.child("action_id").getValue()));
                                                 groupChallenges.setAction_id(StringFromObject(datasnapshot2.getValue()));
                                             }
                                             if(challengesList.contains(challenge_id)) {
@@ -227,7 +226,8 @@ public class EventChallengesPage extends AppCompatActivity{
                     intent.putExtra("actionTitle",groupChallengeEntityArrayList.get(i).getTitle());
                     intent.putExtra("actionDescription",groupChallengeEntityArrayList.get(i).getDesciption());
                     intent.putExtra("actionImage",groupChallengeEntityArrayList.get(i).getImage_url());
-
+                    intent.putExtra("isVideo",groupChallengeEntityArrayList.get(i).isVideo());
+                    intent.putExtra("videoUrl",groupChallengeEntityArrayList.get(i).getVideoUrl());
                     intent.putExtra("prof_id", prof_id);
                    if(groupChallengeEntityArrayList.get(i).isAttended()){
                        intent.putExtra("prof_id", prof_id);

@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -14,6 +15,19 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
+import com.google.android.exoplayer2.ExoPlayerFactory;
+import com.google.android.exoplayer2.SimpleExoPlayer;
+import com.google.android.exoplayer2.extractor.DefaultExtractorsFactory;
+import com.google.android.exoplayer2.extractor.ExtractorsFactory;
+import com.google.android.exoplayer2.source.ExtractorMediaSource;
+import com.google.android.exoplayer2.source.MediaSource;
+import com.google.android.exoplayer2.trackselection.AdaptiveTrackSelection;
+import com.google.android.exoplayer2.trackselection.DefaultTrackSelector;
+import com.google.android.exoplayer2.trackselection.TrackSelector;
+import com.google.android.exoplayer2.ui.SimpleExoPlayerView;
+import com.google.android.exoplayer2.upstream.BandwidthMeter;
+import com.google.android.exoplayer2.upstream.DefaultBandwidthMeter;
+import com.google.android.exoplayer2.upstream.DefaultHttpDataSourceFactory;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -30,9 +44,13 @@ public class ActionsPage extends AppCompatActivity {
     ChallengeActionsCustomAdapter challengeActionsCustomAdapter;
     TextView actionDescription;
     ImageView actionImage;
+    SimpleExoPlayerView exoPlayerView;
+    SimpleExoPlayer exoPlayer;
+private String videoUrl="";
     String prof_id;
     Bundle bundle;
     String challenge_id;
+    Uri videouri;
     private DatabaseReference mDatabase;
     ArrayList<ActionChallengeEntity> actionEntityArrayList;
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,11 +63,40 @@ public class ActionsPage extends AppCompatActivity {
         actionImage=(ImageView)findViewById(R.id.actionImage);
         actionDescription=(TextView) findViewById(R.id.actionDescription);
         actionTitle=(TextView) findViewById(R.id.actionTitle);
+        exoPlayerView=(SimpleExoPlayerView)findViewById(R.id.exoplayerview);
+        try{
 
+            if(bundle.getBoolean("isVideo")){
+                BandwidthMeter bandwidthMeter=new DefaultBandwidthMeter();
+                TrackSelector trackSelector=new DefaultTrackSelector(new AdaptiveTrackSelection.Factory(bandwidthMeter));
+                videoUrl="https://campaigndata-campaign.appspot.com/?t=vidupd&file="+bundle.getString("videoUrl");
+                exoPlayer=ExoPlayerFactory.newSimpleInstance(this,trackSelector);
+                videouri=Uri.parse(videoUrl);
+                DefaultHttpDataSourceFactory defaultHttpDataSourceFactory=new DefaultHttpDataSourceFactory("exoplayer_video");
+                ExtractorsFactory extractorsFactory=new DefaultExtractorsFactory();
+                MediaSource mediaSource=new ExtractorMediaSource(videouri,defaultHttpDataSourceFactory,extractorsFactory,null,null);
+                exoPlayerView.setPlayer(exoPlayer);
+                exoPlayer.prepare(mediaSource);
+                exoPlayer.setPlayWhenReady(true);
+                Log.e("MainActivity","exoplayer error");
+                Log.e("check vid",bundle.getString("videoUrl"));
+                Log.e("chec",String.valueOf(bundle.getBoolean("isVideo")));
+            }
+            else{
+                Glide.with(this).load(urlLink+bundle.getString("actionImage")).into(actionImage);
+            }
+
+        }
+        catch(Exception e){
+
+            Log.e("Error",e.toString());
+
+        }
         if(bundle!=null) {
             actionDescription.setText(bundle.getString("actionDescription"));
             actionTitle.setText(bundle.getString("actionTitle"));
-            Glide.with(this).load(urlLink+bundle.getString("actionImage")).into(actionImage);
+
+
         }
         challenge_id= bundle.getString("challenge_id");
         prof_id=bundle.getString("prof_id");
@@ -86,7 +133,6 @@ getActionsData();
                             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                                 if(dataSnapshot!=null){
 
-                                    Log.e("e",StringFromObject(dataSnapshot.child("action_id").getValue()));
                                     ActionChallengeEntity actionChallengeEntity=new ActionChallengeEntity();
                                     actionChallengeEntity.setActionId(StringFromObject(dataSnapshot.child("action_id").getValue()));
                                     actionChallengeEntity.setActionDescrip(StringFromObject(dataSnapshot.child("descrip").getValue()));
