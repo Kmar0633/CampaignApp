@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/image_activityMain2_articleImage"
+                    android:layout_width="400dp"
+                    android:layout_height="352dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="50dp"
+
+                    android:scaleType="fitXY">
+
+                </ImageView>
+
+
+                <TextView
+                    android:id="@+id/text_activityMain2_articleTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-400dp"
+                    android:layout_marginTop="300dp"
+
+
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/text_activityMain2_articleDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-400dp"
+                    android:layout_marginTop="400dp"
+
+
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/middlelayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="-400dp"
+                    android:layout_marginTop="500dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+
+
+
+
+
+
+                    <TextView
+                        android:id="@+id/text_eventChallenges_challengesView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Challenges View"
+                        android:textSize="20dp"
+
+
+                        />
+                    <com.example.myapplication.ExpandableHeightListView
+                        android:id="@+id/list_activityMain2_challengesList"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="30dp"
+                        android:dividerHeight="40px"
+                        android:focusable="false"
+                        android:divider="@android:color/transparent" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/middlelayout"
+                    android:layout_marginLeft="-400dp"
+                    android:layout_marginTop="800dp"
+                    android:orientation="vertical">
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

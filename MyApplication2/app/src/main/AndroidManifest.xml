@@ -13,16 +13,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ActionActivity"></activity>
-        <activity android:name=".MainActivity">
+
+        <activity android:name=".ActionActivity" />
+        <activity android:name=".EventNew.Main2Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ChallengeActionsActivity"></activity>
-        <activity android:name=".EventChallengesActivity"></activity>
+        <activity android:name=".ChallengeActionsActivity" />
+        <activity android:name=".EventChallengesActivity" />
     </application>
 
 </manifest>
