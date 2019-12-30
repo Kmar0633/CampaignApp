@@ -1,36 +1,35 @@
 package com.example.myapplication;
 
-import com.google.firebase.database.DataSnapshot;
-
 public class EventChallengeEntity {
-    String title;
+    String action_id;
 
-    public String getImageUrl() {
-        return imageUrl;
-    }
-
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
-    }
-    String keyID;
-    String imageUrl;
-    DataSnapshot dataSnapshot;
-    public void setKeyID(String keyID){
-        this.keyID=keyID;
-    }
-    public String getKeyID(){
-        return this.keyID;
-    }
-    public String getDescription() {
-        return description;
+    public boolean isVideo() {
+        return isVideo;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setVideo(boolean video) {
+        isVideo = video;
     }
 
-    String description;
+    boolean isVideo;
+    public String getVideoUrl() {
+        return videoUrl;
+    }
 
+    public void setVideoUrl(String videoUrl) {
+        this.videoUrl = videoUrl;
+    }
+
+    String videoUrl;
+    public boolean isAttended() {
+        return attended;
+    }
+
+    public void setAttended(boolean attended) {
+        this.attended = attended;
+    }
+
+    boolean attended;
     public String getTitle() {
         return title;
     }
@@ -39,10 +38,41 @@ public class EventChallengeEntity {
         this.title = title;
     }
 
-    public DataSnapshot getDataSnapshot(){
-        return dataSnapshot;
+    String title;
+    public String getDesciption() {
+        return desciption;
     }
-    public void setDataSnapshot(DataSnapshot dataSnapshot){
-         this.dataSnapshot=dataSnapshot;
+
+    public void setDesciption(String desciption) {
+        this.desciption = desciption;
+    }
+
+    String desciption;
+    public String getImage_url() {
+        return image_url;
+    }
+
+    public void setImage_url(String image_url) {
+        this.image_url = image_url;
+    }
+
+    String image_url;
+
+    public String getChallenge_id() {
+        return challenge_id;
+    }
+
+    public void setChallenge_id(String challenge_id) {
+        this.challenge_id = challenge_id;
+    }
+
+    String challenge_id;
+
+    public String getAction_id() {
+        return action_id;
+    }
+
+    public void setAction_id(String action_id) {
+        this.action_id = action_id;
     }
 }

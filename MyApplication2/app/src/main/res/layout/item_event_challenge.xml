@@ -8,18 +8,18 @@
         android:layout_height="159dp">
 
         <ImageView
-            android:id="@+id/imageChallenge"
+            android:id="@+id/image_eventChallenges_eventImage"
 
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:adjustViewBounds="true"
             android:scaleType="fitXY"
 
-            >
+            />
 
-        </ImageView>
+
         <ImageView
-            android:id="@+id/playIconimageChallenge1"
+            android:id="@+id/image_itemEventChallenge_videoIcon"
 
             android:layout_width="30dp"
             android:layout_height="30dp"
@@ -33,7 +33,7 @@
         </ImageView>
 
         <TextView
-            android:id="@+id/challengeName"
+            android:id="@+id/text_itemEventChallenge_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="0dp"
@@ -44,7 +44,7 @@
         </TextView>
 
         <TextView
-            android:id="@+id/challenge_id"
+            android:id="@+id/text_itemEventChallenge_challengeId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="0dp"

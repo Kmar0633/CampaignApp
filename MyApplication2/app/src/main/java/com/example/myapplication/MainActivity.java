@@ -3,7 +3,6 @@ package com.example.myapplication;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -27,9 +26,9 @@ import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
 ExpandableHeightListView list;
-ArrayList<EventChallengeEntity> groupChallengeEntityArrayList=new ArrayList<EventChallengeEntity>();
+ArrayList<EventEntity> groupChallengeEntityArrayList=new ArrayList<EventEntity>();
 private DatabaseReference mDatabase;// ...
-     EventsCustomAdapter customAdapter;
+     EventsListAdapter customAdapter;
      private ImageView profilePic;
      private TextView profileTitle;
     private String urlLink="https://campaigndata-campaign.appspot.com/?t=upd&w=500&crop=true&file=";
@@ -51,7 +50,7 @@ public void getEventChallengesData() {
             // ...
             if(dataSnapshot.getValue()!=null){
                 for(DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
-                    EventChallengeEntity groupChallengeEntity = new EventChallengeEntity();
+                    EventEntity groupChallengeEntity = new EventEntity();
 
 
                         if(dataSnapshotArrayList.containsKey(dataSnapshot1.getKey())) {
@@ -152,19 +151,19 @@ public void getEventChallengesData() {
 
 
                     if(datasnapshot2.getKey().equals("firstname")) {
-                        profileTitle = (TextView) findViewById(R.id.profileName);
+                        profileTitle = (TextView) findViewById(R.id.text_activityMain_profileFirstName);
 
                         profileTitle.setText(StringFromObject(datasnapshot2.getValue()));
                     }
 
                         else if(datasnapshot2.getKey().equals("descrip")) {
 
-                        profileDescrp = (TextView) findViewById(R.id.descriptionView);
+                        profileDescrp = (TextView) findViewById(R.id.text_activityMain_profileDescripName);
 
                         profileDescrp.setText(StringFromObject(datasnapshot2.getValue()));
                     }
                     else if(datasnapshot2.getKey().equals("avatar")) {
-                        profilePic = (ImageView) findViewById(R.id.imageView);
+                        profilePic = (ImageView) findViewById(R.id.image_activityMain_profileImage);
                         imageUrl = urlLink + StringFromObject(datasnapshot2.getValue());
                         String imageLink =urlLink + StringFromObject(datasnapshot2.getValue());
                         imageUrl=imageLink;
@@ -196,7 +195,7 @@ public void getEventChallengesData() {
     protected void onCreate(Bundle savedInstanceState) {
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
-        final Intent intent = new Intent(getApplicationContext(),EventChallengesPage.class);
+        final Intent intent = new Intent(getApplicationContext(), EventChallengesActivity.class);
         super.onCreate(savedInstanceState);
 //profilePic=(ImageView) findViewById(R.id.imageView);
 
@@ -207,10 +206,10 @@ public void getEventChallengesData() {
 
 
         setContentView(R.layout.activity_main);
-        list = (ExpandableHeightListView) findViewById(R.id.list);
+        list = (ExpandableHeightListView) findViewById(R.id.list_activityMain_eventsList);
 
         list.setExpanded(true);
-        customAdapter=new EventsCustomAdapter(groupChallengeEntityArrayList, this);
+        customAdapter=new EventsListAdapter(groupChallengeEntityArrayList, this);
         setListViewHeight(list);
 
         list.setAdapter(customAdapter);

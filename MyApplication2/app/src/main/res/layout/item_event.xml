@@ -8,7 +8,7 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/imageAction"
+            android:id="@+id/image_itemEvent"
             android:layout_width="187dp"
             android:layout_height="148dp"
             android:adjustViewBounds="true"
@@ -19,7 +19,7 @@
         </ImageView>
 
         <TextView
-            android:id="@+id/titleAction"
+            android:id="@+id/text_itemEvent_title"
             android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -29,7 +29,7 @@
 
         </TextView>
         <TextView
-            android:id="@+id/descriptionAction"
+            android:id="@+id/text_itemEvent_descrip"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="200dp"

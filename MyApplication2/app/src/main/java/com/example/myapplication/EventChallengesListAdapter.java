@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,12 +15,12 @@ import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
-public class EventChallengesCustomAdapter extends BaseAdapter {
-    ArrayList<ActionEntity> groupChallengeEntityArrayList;
+public class EventChallengesListAdapter extends BaseAdapter {
+    ArrayList<EventChallengeEntity> groupChallengeEntityArrayList;
     private final Context activity;
 
     private String urlLink="https://campaigndata-campaign.appspot.com/?t=upd&w=500&crop=true&file=";
-    public EventChallengesCustomAdapter(ArrayList<ActionEntity> groupChallengeEntityArrayList1, Context activity1){
+    public EventChallengesListAdapter(ArrayList<EventChallengeEntity> groupChallengeEntityArrayList1, Context activity1){
         this.activity=activity1;
         this.groupChallengeEntityArrayList=groupChallengeEntityArrayList1;
     }
@@ -43,12 +42,12 @@ public class EventChallengesCustomAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         LayoutInflater layoutInflater=(LayoutInflater) activity.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
-        view = layoutInflater.inflate(R.layout.listview_group_challenge_layout, null);
-        ImageView imageView=(ImageView)view.findViewById(R.id.imageChallenge);
-        TextView textView=(TextView)view.findViewById(R.id.challenge_id);
-        ImageView playIconAction=(ImageView)view.findViewById(R.id.playIconimageChallenge1);
+        view = layoutInflater.inflate(R.layout.item_event_challenge, null);
+        ImageView imageView=(ImageView)view.findViewById(R.id.image_eventChallenges_eventImage);
+        TextView textView=(TextView)view.findViewById(R.id.text_itemEventChallenge_challengeId);
+        ImageView playIconAction=(ImageView)view.findViewById(R.id.image_itemEventChallenge_videoIcon);
         textView.setText(this.groupChallengeEntityArrayList.get(i).getTitle());
-        TextView challengeName=(TextView)view.findViewById(R.id.challengeName);
+        TextView challengeName=(TextView)view.findViewById(R.id.text_itemEventChallenge_title);
         textView.setText(this.groupChallengeEntityArrayList.get(i).getTitle());
         Glide.with(activity).load(urlLink+groupChallengeEntityArrayList.get(i).getImage_url()).into(imageView);
       //  Log.e("turn",String.valueOf(groupChallengeEntityArrayList.get(i).isVideo()));

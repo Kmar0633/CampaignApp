@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -36,12 +37,12 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class ActionsPage extends AppCompatActivity {
+public class ChallengeActionsActivity extends AppCompatActivity {
     TextView actionTitle;
     ExpandableHeightListView list;
     private String urlLink="https://campaigndata-campaign.appspot.com/?t=upd&w=500&crop=true&file=";
     private String urlActionLink="https://campaigndata-campaign.appspot.com/?t=act&w=500&crop=true&file=";
-    ChallengeActionsCustomAdapter challengeActionsCustomAdapter;
+    ChallengeActionsListAdapter challengeActionsListAdapter;
     TextView actionDescription;
     ImageView actionImage;
     SimpleExoPlayerView exoPlayerView;
@@ -57,15 +58,16 @@ private String videoUrl="";
     ArrayList<ActionChallengeEntity> actionEntityArrayList;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Bundle bundle=getIntent().getExtras();
+        bundle=getIntent().getExtras();
         mDatabase = FirebaseDatabase.getInstance().getReference();
-
+        final Intent intent = new Intent(getApplicationContext(), ActionActivity.class);
         actionEntityArrayList=new ArrayList<ActionChallengeEntity>();
-        setContentView(R.layout.action_layout);
+        setContentView(R.layout.activity_challenge_actions);
         actionImage=(ImageView)findViewById(R.id.actionImage);
         actionDescription=(TextView) findViewById(R.id.actionDescription);
         actionTitle=(TextView) findViewById(R.id.actionTitle);
         exoPlayerView=(SimpleExoPlayerView)findViewById(R.id.exoplayerview);
+
         try{
 
             if(bundle.getBoolean("isVideo")){
@@ -111,16 +113,19 @@ private String videoUrl="";
         list = (ExpandableHeightListView) findViewById(R.id.actionsList);
 
         list.setExpanded(true);
-        challengeActionsCustomAdapter=new ChallengeActionsCustomAdapter(actionEntityArrayList, this);
+        challengeActionsListAdapter =new ChallengeActionsListAdapter(actionEntityArrayList, this);
         setListViewHeight(list);
 
-        list.setAdapter(challengeActionsCustomAdapter);
+        list.setAdapter(challengeActionsListAdapter);
 
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
-
+                intent.putExtra("actionTitle",actionEntityArrayList.get(i).getActionTitle());
+                intent.putExtra("actionDescrip",actionEntityArrayList.get(i).getActionDescrip());
+                intent.putExtra("actionImage",actionEntityArrayList.get(i).getImageUrl());
+               // Log.e("actionTitle",actionEntityArrayList.get(i).getActionTitle());
+                startActivity(intent);
             }
         });
 getActionsData();
@@ -177,7 +182,7 @@ getActionsData();
                                    // actionChallengeEntity.setActionTitle(StringFromObject(dataSnapshot.child("action_id").getValue()));
                                     actionEntityArrayList.add(actionChallengeEntity);
 
-                                    challengeActionsCustomAdapter.notifyDataSetChanged();
+                                    challengeActionsListAdapter.notifyDataSetChanged();
                                 }
 
 

@@ -12,7 +12,6 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -24,7 +23,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class EventChallengesPage extends AppCompatActivity{
+public class EventChallengesActivity extends AppCompatActivity{
     ImageView eventImage;
     String imageUrl;
     TextView textTitle;
@@ -34,9 +33,9 @@ public class EventChallengesPage extends AppCompatActivity{
     DatabaseReference mDatabase;
     String textChallengeInList;
     ArrayList<String> challengesList=new ArrayList<String>();
-    EventChallengesCustomAdapter groupChallengesCustomAdapter;
+    EventChallengesListAdapter groupChallengesCustomAdapter;
     String prof_id="";
-    ArrayList<ActionEntity> groupChallengeEntityArrayList=new  ArrayList<ActionEntity>();
+    ArrayList<EventChallengeEntity> groupChallengeEntityArrayList=new  ArrayList<EventChallengeEntity>();
     public void getData(){
 
 
@@ -80,7 +79,7 @@ public class EventChallengesPage extends AppCompatActivity{
 
                                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                                        ActionEntity groupChallenges = new ActionEntity();
+                                        EventChallengeEntity groupChallenges = new EventChallengeEntity();
                                         groupChallenges.setTitle(title);
                                         groupChallenges.setDesciption(desc);
                                         groupChallenges.setVideoUrl(videoUrl);
@@ -189,12 +188,12 @@ public class EventChallengesPage extends AppCompatActivity{
     }
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.event_challenge);
+        setContentView(R.layout.activity_event_challenges);
         Bundle bundle=getIntent().getExtras();
-        eventImage=(ImageView)findViewById(R.id.imageChallenge);
-         textTitle=(TextView)findViewById(R.id.challengeTitle);
+        eventImage=(ImageView)findViewById(R.id.image_eventChallenges_eventImage);
+         textTitle=(TextView)findViewById(R.id.text_eventChallenges_eventTitle);
         textDescription=(TextView)findViewById(R.id.eventDescription);
-        textChallenge=(TextView)findViewById(R.id.textChallenge);
+        textChallenge=(TextView)findViewById(R.id.text_eventChallenges_challengesView);
         Intent intent=getIntent();
         prof_id=intent.getStringExtra("prof_id");
         if (bundle!=null){
@@ -213,9 +212,9 @@ Log.e("e",bundle.getString("description"));
             textChallengeInList=bundle.getString("challenge");
             challengesList=bundle.getStringArrayList("challenges");
            // textView.setText();
-            list = (ExpandableHeightGridView) findViewById(R.id.gridViewChallenges);
+            list = (ExpandableHeightGridView) findViewById(R.id.gridview_eventChallenges_challengesList);
             list.setExpanded(true);
-            groupChallengesCustomAdapter=new EventChallengesCustomAdapter(groupChallengeEntityArrayList, this);
+            groupChallengesCustomAdapter=new EventChallengesListAdapter(groupChallengeEntityArrayList, this);
             list.setAdapter(groupChallengesCustomAdapter);
             setListViewHeight(list);
             mDatabase = FirebaseDatabase.getInstance().getReference();
@@ -223,7 +222,7 @@ Log.e("e",bundle.getString("description"));
             list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                    Intent intent = new Intent(getApplicationContext(),ActionsPage.class);
+                    Intent intent = new Intent(getApplicationContext(), ChallengeActionsActivity.class);
                     intent.putExtra("actionTitle",groupChallengeEntityArrayList.get(i).getTitle());
                     intent.putExtra("actionDescription",groupChallengeEntityArrayList.get(i).getDesciption());
                     intent.putExtra("actionImage",groupChallengeEntityArrayList.get(i).getImage_url());
