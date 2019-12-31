@@ -45,7 +45,7 @@ private LinearLayout mDotsLayout;
                 // Check if this is the page you want.
                 for(int i=0;i<mDots.length;i++){
 
-                    mDots[i].setTextColor(getResources().getColor(R.color.RosyBrown));
+                    mDots[i].setTextColor(getResources().getColor(R.color.gray_1));
                 }
 
                 mDots[position].setTextColor(getResources().getColor(R.color.Blue));
@@ -60,10 +60,12 @@ private LinearLayout mDotsLayout;
 mDots[i]=new TextView(this);
             mDots[i].setText(Html.fromHtml(("&#8226;")));
             mDots[i].setTextSize(35);
-            mDots[i].setTextColor(getResources().getColor(R.color.Blue));
+            mDots[0].setTextColor(getResources().getColor(R.color.Blue));
 
             mDotsLayout.addView(mDots[i]);
         }
+        mDots[1].setTextColor(getResources().getColor(R.color.gray_1));
+        mDots[2].setTextColor(getResources().getColor(R.color.gray_1));
     }
 
 }
