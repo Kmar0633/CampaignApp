@@ -22,10 +22,12 @@ private SliderAdapter sliderAdapter;
 private TextView[] mDots;
 private LinearLayout mDotsLayout;
 private TextView loginText;
+private SessionSharedPreferences sessionSharedPreferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
+        sessionSharedPreferences = new SessionSharedPreferences(Main3Activity.this);
         loginText=(TextView)findViewById(R.id.text_activityMain3_loginBtn);
         mDotsLayout=(LinearLayout) findViewById(R.id.linearLayout_activityMain3_linearLayout);
         slideviewPager=(ViewPager)findViewById(R.id.viewpager);
@@ -59,6 +61,8 @@ private TextView loginText;
             public void onClick(View v) {
                 final Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(intent);
+                finish();
+                sessionSharedPreferences.setAFTER_OPEN("1");
             }
         });
     }

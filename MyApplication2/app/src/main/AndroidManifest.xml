@@ -15,7 +15,10 @@
         android:usesCleartextTraffic="true">
         <activity android:name=".Login.LoginActivity"></activity>
         <activity android:name=".ActionActivity" />
-        <activity android:name=".Login.Main3Activity">
+        <activity android:name=".Login.Main3Activity"></activity>
+        <activity android:name=".Login.SplashActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

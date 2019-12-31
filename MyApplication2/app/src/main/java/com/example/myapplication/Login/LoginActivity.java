@@ -14,4 +14,9 @@ public class LoginActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_log_in_new);
     }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 }
