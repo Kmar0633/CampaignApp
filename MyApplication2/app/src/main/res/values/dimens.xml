@@ -1,0 +1,278 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="header_height">180dp</dimen>
+    <dimen name="action_bar_height">56dp</dimen>
+    <dimen name="toolbar_left_margin">72dp</dimen>
+
+    <!-- START activity_main.xml -->
+    <dimen name="menu_bottom_icon_padding">0dp</dimen>
+    <dimen name="side_menu_width">250dp</dimen>
+    <dimen name="side_menu_profile_background_height">200dp</dimen>
+    <dimen name="side_menu_profile_image_width_height">40dp</dimen>
+    <dimen name="side_menu_link_padding_top">5dp</dimen>
+    <dimen name="side_menu_link_padding_left">10dp</dimen>
+    <dimen name="side_menu_link_padding_left_new">30dp</dimen>
+    <dimen name="side_menu_link_icon_width">30dp</dimen>
+    <dimen name="side_menu_link_icon_height">30dp</dimen>
+    <dimen name="side_left_menu">15dp</dimen>
+    <dimen name="side_menu_link_title_size">16dp</dimen>
+    <dimen name="side_menu_link_height">50dp</dimen>
+    <dimen name="keyboard_height">320dp</dimen>
+    <!-- STOP activity_main.xml -->
+
+    <!-- START fragment_home.xml -->
+    <dimen name="home_padding_common">10dp</dimen>
+    <dimen name="home_pict_image_height">300dp</dimen>
+    <dimen name="home_layout_header_height">42dp</dimen>
+    <dimen name="home_margin_bottom">20dp</dimen>
+    <!-- STOP fragment_home.xml -->
+
+    <!-- START explore.xml -->
+    <dimen name="explore_padding_common">10dp</dimen>
+    <dimen name="default_circle_indicator_extra_spacing">1dp</dimen>
+    <dimen name="explore_padding_image_viewpager">10dp</dimen>
+    <dimen name="explore_font_size_title_viewpager">14dp</dimen>
+    <dimen name="explore_font_size_push_notif">13dp</dimen>
+    <dimen name="explore_width_push_notif">50dp</dimen>
+    <dimen name="explore_search_text_height">50dp</dimen>
+
+    <dimen name="explore_view_image_height">200dp</dimen>
+
+    <dimen name="explore_search_result_image_margin">10dp</dimen>
+    <!-- STOP explore.xml -->
+
+    <dimen name="profile_padding_common">5dp</dimen>
+    <dimen name="profile_profile_image_width">90dp</dimen>
+    <dimen name="profile_profile_image_height">90dp</dimen>
+
+    <dimen name="padding_button_top">5dp</dimen>
+    <dimen name="padding_button_bottom">5dp</dimen>
+    <dimen name="padding_button_left">50dp</dimen>
+    <dimen name="padding_button_right">50dp</dimen>
+
+    <dimen name="profile_header_height">280dp</dimen>
+    <dimen name="profile_header_height_scroll">340dp</dimen>
+
+    <dimen name="tapLikeHeight">60dp</dimen>
+    <dimen name="tapLikeWidth">60dp</dimen>
+
+    <dimen name="profile_pict_image_height">70dp</dimen>
+    <dimen name="profile_pict_image_width">70dp</dimen>
+    <dimen name="toolbar_elevation">4dp</dimen>
+    <!--<dimen name="tab_height">48dp</dimen>-->
+    <dimen name="tab_height">88dp</dimen>
+    <dimen name="detail_action_image_comment_left_margin">20dp</dimen>
+
+    <dimen name="toolbar_bottom_height">50dp</dimen>
+    <dimen name="toolbar_bottom_padding">5dp</dimen>
+    <dimen name="toolbar_bottom_button_plus_height">60dp</dimen>
+    <dimen name="padding_common">10dp</dimen>
+    <dimen name="padding_chat_list_top">20dp</dimen>
+
+    <dimen name="margin_common">10dp</dimen>
+    <dimen name="margin_common_small">5dp</dimen>
+    <dimen name="margin_common_large">16dp</dimen>
+    <dimen name="margin_common_10">10dp</dimen>
+    <dimen name="margin_common_20">20dp</dimen>
+    <dimen name="margin_common_30">30dp</dimen>
+    <dimen name="margin_common_40">40dp</dimen>
+    <dimen name="margin_common_50">50dp</dimen>
+    <dimen name="button_padding_top_bottom">5dp</dimen>
+    <dimen name="button_padding_left_right">25dp</dimen>
+    <dimen name="common_width_small_width">30dp</dimen>
+    <dimen name="common_width_small_height">30dp</dimen>
+
+    <dimen name="padding_common_large">100dp</dimen>
+
+    <dimen name="common_dimen_normal_height">32dp</dimen>
+    <dimen name="common_dimen_normal_width">32dp</dimen>
+
+    <dimen name="dimen_normal_height_pic">32dp</dimen>
+    <dimen name="dimen_normal_width_pic">32dp</dimen>
+    <dimen name="chat_normal_height_pic">40dp</dimen>
+    <dimen name="chat_normal_width_pic">40dp</dimen>
+
+    <dimen name="new_dimen_normal_height_pic">50dp</dimen>
+    <dimen name="new_dimen_normal_width_pic">50dp</dimen>
+    <dimen name="new_dimen_normal_height_picSmall">35dp</dimen>
+    <dimen name="new_dimen_normal_width_picSmall">35dp</dimen>
+    <dimen name="font_normal_width_pic">15sp</dimen>
+    <dimen name="font_normal_width_pic_small">13sp</dimen>
+
+
+    <dimen name="padding_tiny_common">1dp</dimen>
+
+    <dimen name="padding_small_common">5dp</dimen>
+    <dimen name="padding_small_issue">10dp</dimen>
+
+    <dimen name="profile_tabs_top_title_size">20dp</dimen>
+    <dimen name="profile_tabs_bottom_title_size">15dp</dimen>
+
+    <dimen name="profile_tabs_margin_bottom_line">5dp</dimen>
+    <dimen name="profile_tabs_height_bottom_line">5dp</dimen>
+    <dimen name="profile_height_bottom_line">1dp</dimen>
+
+    <dimen name="add_contacts_tab_image_height">50dp</dimen>
+    <dimen name="add_contacts_tab_margin_line">10dp</dimen>
+    <dimen name="add_contacts_bottom_line_height">3dp</dimen>
+
+    <dimen name="progress_bar_height">30dp</dimen>
+
+    <dimen name="detail_actoin_list_margin_bottom">30dp</dimen>
+    <dimen name="profile_button_add_edit_height">35dp</dimen>
+    <dimen name="profile_font_size_description">6pt</dimen>
+    <dimen name="campaign_page_cover_image_height">170dp</dimen>
+    <dimen name="campaign_page_cover_image_height_new">200dp</dimen>
+
+
+    <dimen name="profile_edit_cover_padding">40dp</dimen>
+    <dimen name="profile_edit_cover_image_height">100dp</dimen>
+
+    <dimen name="profile_edit_list_height">40dp</dimen>
+    <dimen name="new_profile_edit_list_height">60dp</dimen>
+    <dimen name="profile_edit_list_spinner_left_margin">3dp</dimen>
+
+    <dimen name="profile_edit_list_icon_height">37dp</dimen>
+    <dimen name="menu_bottom_icon_create_margin">5dp</dimen>
+
+    <dimen name="home_text_size">7pt</dimen>
+    <dimen name="padding_semi_large_common">15dp</dimen>
+    <dimen name="padding_large_common">20dp</dimen>
+
+    <dimen name="comment_text_empty_width">200dp</dimen>
+    <dimen name="login_icon_mini_width">20dp</dimen>
+
+    <dimen name="text_size_xl">18sp</dimen>
+    <dimen name="text_size_xl2">16sp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_xxsmall">13sp</dimen>
+    <dimen name="text_size_xxxsmall">12sp</dimen>
+    <dimen name="text_size_xsmall">7pt</dimen>
+    <dimen name="text_size_large">8pt</dimen>
+    <dimen name="text_size_big">10pt</dimen>
+    <dimen name="text_size_super">12pt</dimen>
+    <dimen name="text_size_thank_you">16pt</dimen>
+    <dimen name="text_size_16">16dp</dimen>
+    <dimen name="text_size_18">18dp</dimen>
+    <dimen name="text_size_20">20dp</dimen>
+    <dimen name="text_size_22">22dp</dimen>
+
+    <dimen name="text_size_normal">15sp</dimen>
+    <dimen name="text_size_mini">12sp</dimen>
+    <dimen name="text_size_mini2">11sp</dimen>
+    <dimen name="text_size_badge">10sp</dimen>
+
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="height_editText_launcher">40dp</dimen>
+    <dimen name="padding_edittext_launcher_left">15dp</dimen>
+    <dimen name="chat_group_avatar_height">40dp</dimen>
+    <dimen name="chat_group_image_right">20dp</dimen>
+    <dimen name="chat_group_icon_detail">25dp</dimen>
+
+    <dimen name="filter_color">30dp</dimen>
+
+    <dimen name="comment_edittext_minimum_height">40dp</dimen>
+
+    <dimen name="emoji_size">35dp</dimen>
+    <dimen name="in_message_emoji_size">35dp</dimen>
+
+    <dimen name="sticker_size">64dp</dimen>
+
+    <dimen name="common_edit_list_height">50dp</dimen>
+    <dimen name="radius">200dp</dimen>
+    <dimen name="title_milestone">18sp</dimen>
+
+    <dimen name="padding_top_explore_not_found">30dp</dimen>
+
+    <dimen name="padding_badge_icon">2dp</dimen>
+
+    <!--padding box-->
+    <dimen name="padding_textbox_new">5dp</dimen>
+    <!--padding textbox-->
+    <dimen name="padding_textbox_isi">10dp</dimen>
+    <!--size textbox-->
+    <dimen name="size_textbox_isi">15sp</dimen>
+
+    <dimen name="size_name_profile">22dp</dimen>
+    <dimen name="size_name_title_count">12dp</dimen>
+    <dimen name="size_name_title_small_about">11dp</dimen>
+
+    <dimen name="contact_us_height_box">45dp</dimen>
+    <dimen name="contact_us_height_icon">23dp</dimen>
+    <dimen name="contact_us_margin_icon">11dp</dimen>
+    <dimen name="contact_us_text_size">13dp</dimen>
+
+    <!--Thank you/No Result page-->
+    <dimen name="no_res_box_margin">10dp</dimen>
+    <dimen name="no_res_container_margin">23dp</dimen>
+    <dimen name="no_res_icon_size">35dp</dimen>
+    <dimen name="no_res_title_size">25dp</dimen>
+    <dimen name="no_res_title_margin">10dp</dimen>
+    <dimen name="no_res_title_line_spacing">2dp</dimen>
+    <dimen name="no_res_desc_size">22dp</dimen>
+    <dimen name="no_res_link_margin">18dp</dimen>
+    <dimen name="no_res_link_size">12dp</dimen>
+    <dimen name="no_res_title_margin_home">23dp</dimen>
+
+    <!--ChatPage-->
+    <dimen name="radiusall">15dp</dimen>
+    <dimen name="chat_roundedimagetopminus">-22dp</dimen>
+    <dimen name="chat_roundedimagetop">22dp</dimen>
+    <dimen name="chat_box_url_card_border">19dp</dimen>
+    <dimen name="roundedboxall">10dp</dimen>
+    <dimen name="chat_box_card_campaign">10dp</dimen>
+    <dimen name="chat_box_padding_bubble">42dp</dimen>
+    <dimen name="chat_url_image_height">130dp</dimen>
+    <dimen name="chat_url_title_size">15sp</dimen>
+    <dimen name="chat_url_desc_size">14sp</dimen>
+    <dimen name="chat_message_size">16sp</dimen>
+    <dimen name="chat_message_info_size">11dp</dimen>
+    <dimen name="chat_padding_bubble_TB">7dp</dimen>
+    <dimen name="chat_padding_bubble_LR">10dp</dimen>
+    <dimen name="chat_margin_bubble_LR">40dp</dimen>
+    <dimen name="chat_margin_bubble_TB">11dp</dimen>
+
+    <dimen name="dimen_font_emoticon">45dp</dimen>
+    <dimen name="dimen_font_emoticon_size">20sp</dimen>
+
+    <dimen name="btn_private">20dp</dimen>
+    <dimen name="btn_private_bottom">8dp</dimen>
+    <dimen name="margin_feature_action">16dp</dimen>
+    <dimen name="margin_feature_action_title">5dp</dimen>
+
+    <dimen name="line_dimens">1dp</dimen>
+    <dimen name="line_dimens_margin">5dp</dimen>
+
+    <dimen name="box_search_margin_left">16dp</dimen>
+    <dimen name="box_search_margin_right">16dp</dimen>
+    <dimen name="box_search_padding_top">10dp</dimen>
+    <dimen name="box_search_padding_bottom">5dp</dimen>
+    <dimen name="divider_list">10dp</dimen>
+    <dimen name="new_chat_message_size">12sp</dimen>
+    <dimen name="margin_image_top">5dp</dimen>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+
+    <dimen name="btn_camp_type">50dp</dimen>
+    <dimen name="btn_login">20dp</dimen>
+    <dimen name="heightbutton">40dp</dimen>
+    <dimen name="widthbuttonfooter">90dp</dimen>
+
+    <dimen name="radiusbutton">20dp</dimen>
+
+    <!--photoeditor-->
+    <dimen name="editor_size">25dp</dimen>
+    <dimen name="normal_margin">8dp</dimen>
+    <dimen name="large_margin">16dp</dimen>
+    <dimen name="newheightbutton">50dp</dimen>
+
+    <!--profile-->
+
+    <dimen name="editprofilebox">100dp</dimen>
+    <dimen name="editprofilebox_height">50dp</dimen>
+
+    <dimen name="padding_listUpdAct">5dp</dimen>
+
+</resources>

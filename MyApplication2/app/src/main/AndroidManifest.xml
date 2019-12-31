@@ -13,9 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-
+        <activity android:name=".Login.noActivity"></activity>
         <activity android:name=".ActionActivity" />
-        <activity android:name=".EventNew.Main2Activity">
+        <activity android:name=".Login.Main3Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

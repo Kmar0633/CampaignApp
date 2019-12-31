@@ -1,3 +1,1195 @@
-<resources>
-    <string name="app_name">My Application</string>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Campaign</string>
+    <string name="url_domain">www.campaign.com</string>
+    <string name="campaignDotCom">Campaign.com</string>
+
+    <string name="scheme_profile">profile</string>
+
+    <string name="default_country">1102</string>
+    <string name="default_theme">00A0DC</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_detail">Detail</string>
+    <string name="drawer_open">Slider Menu Opened</string>
+    <string name="drawer_close">Slider Menu Closed</string>
+    <string name="miles_tone">Update</string>
+    <string name="notification">Notifications</string>
+
+    <string name="menu_home">Hub</string>
+    <string name="menu_Explore">Explore</string>
+    <string name="menu_Notfications">Notifications</string>
+    <string name="menu_Chat">Chat</string>
+    <string name="menu_Launch">Start campaign</string>
+    <string name="menu_Approve">Campaign approval</string>
+
+
+    <array name="campaignInterest">
+        <item>All</item>
+        <item>Social</item>
+        <item>Marketing</item>
+        <item>Political</item>
+        <item>Religious</item>
+    </array>
+
+    <!-- Content Description -->
+    <string name="exp_type_all">All</string>
+    <string name="exp_type_social">Social</string>
+    <string name="exp_type_marketing">Marketing</string>
+    <string name="exp_type_political">Political</string>
+    <string name="exp_type_religious">Religious</string>
+
+    <string name="desc_list_item_icon">Item Icon</string>
+    <string name="campaign_home">Campaign</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_fb_logins">FbLogins</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_sign_up">SignUp</string>
+    <string name="title_activity_reset_password">ResetPassword</string>
+    <string name="fb_login_title">#ForChange</string>
+    <string name="fb_login_desc">Empowering individuals to be Changemakers</string>
+    <string name="conn_fb">Connect with Facebook</string>
+    <string name="link_signup">or Sign Up with email</string>
+    <string name="ask_login">Already have an account?</string>
+    <string name="log_in">Log in</string>
+    <string name="sign_up">Sign up</string>
+    <string name="info_agree">By clicking \"Join us\", you agree to our </string>
+    <string name="link_term">Terms of service</string>
+    <string name="link_privacy">Privacy Policy</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="submit_email">Submit Email</string>
+    <string name="ask_forgot">Forgot your password?</string>
+    <string name="new_ask_forgot">Forgot password</string>
+    <string name="info_reset_pass">
+        Enter your email address you used to join and we will send instructions to reset it.
+    </string>
+    <string name="info_submit_email">
+        Enter your email address to set up your account.
+    </string>
+    <string name="title_activity_milestones_detail">Update Detail</string>
+    <string name="title_activity_contact_us">Contact us</string>
+    <string name="location">Location</string>
+    <string name="location_address">
+        Intiland Tower 20th Floor\nJend. Sudirman Street Kav.32\nSouth Jakarta 10220\nIndonesia
+    </string>
+    <string name="location_address_global">
+        Suntec Tower 2, Level 31\nQueens Suite\n9 Temasek Boulevard,\nSingapore 038989
+    </string>
+    <string name="phone">Phone</string>
+    <string name="phone_number">(6221)570 8190</string>
+    <string name="phone_number_global">(65)6559 6175</string>
+    <string name="title_activity_about_campaign">About Campaign</string>
+    <string name="about_txt">About</string>
+    <string name="about_version">Version 0.0.0</string>
+    <string name="about_messenger">Campaign Chat</string>
+    <string name="about_paratu">Campaign.com and the Campaign.com logos are trademarks of \nPT Uni Tokopo Teknologi. All rights reserved.\n\nMade in Indonesia.</string>
+    <string name="about_description">Take part and connect the global social network\n#ForChange</string>
+    <string name="title_activity_manage_notification">Manage Notifications</string>
+    <string name="manage_notif_allow_supported">People Supported My Campaign</string>
+    <string name="manage_notif_allow_shared">People Share My Action</string>
+    <string name="manage_notif_allow_connected">People Connect Me</string>
+    <string name="manage_notif_allow_comment">People Give Comment for me</string>
+    <string name="manage_notif_allow_voted">People Give Vote for me</string>
+    <string name="detail_invited">Invited</string>
+    <string name="detail_milestone">Update</string>
+    <string name="detail_milestones">Updates</string>
+    <string name="detail_action">Action</string>
+    <string name="detail_actions">Actions</string>
+    <string name="detail_target">Target</string>
+    <string name="title_activity_campaign_page">Campaign Page</string>
+    <string name="action_loading">Loading</string>
+    <string name="action_pleasewait">Please wait...</string>
+    <string name="detail_readmore">Read More</string>
+    <string name="title_activity_detail_action_view">DetailActionViewActivity</string>
+    <string name="text_supporter">Supporter</string>
+    <string name="text_community">Community</string>
+    <string name="text_supporters">Supporters</string>
+    <string name="text_heart">Hearted by</string>
+    <string name="detail_action_add_as_contact">Add as Contact</string>
+    <string name="detail_action_report_abuse">Report Abuse</string>
+    <string name="title_activity_detail_action_comments">Comments</string>
+    <string name="text_support">Support</string>
+    <string name="text_feature">Feature an action</string>
+    <string name="text_photo">Photo</string>
+    <string name="text_video">Video</string>
+    <string name="text_audio">Audio</string>
+    <string name="text_quote">Quote</string>
+    <string name="text_gallery">Gallery</string>
+    <string name="text_crowdfund">Crowdfund</string>
+    <string name="support_campaign">Support Campaign</string>
+    <string name="take_action">Take Action</string>
+    <string name="leave_campaign">Leave Campaign</string>
+    <string name="popup_view_leave">Leave</string>
+
+    <string name="title_activity_profile">ProfileActivity</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="alert_redirect_URLCampaign">Campaign not found</string>
+    <string name="alert_redirect_URLProfile">Profile not found</string>
+    <string name="alert_redirect_URLAction">Action not found</string>
+    <string name="alert_redirect_URLUpdate">Update not found</string>
+    <string name="alert_support_error">Support Failed</string>
+    <string name="alert_empty_field">Please insert empty field</string>
+    <string name="alert_updates_date">You can only choose the current or previous dates.</string>
+    <string name="alert_failed_retrieve">Failed to retrieve data settings.</string>
+
+    <string name="alert_CP_MinCharacter">Your password must be at least 5 characters.</string>
+    <string name="alert_CP_DoNotMatch">New password do not match.</string>
+    <string name="alert_CP_Incorrectly">Your current password was entered incorrectly. Please try again.</string>
+
+    <string name="title_activity_take_action">Take Action</string>
+    <string name="upload_photo">Upload Photo</string>
+    <string name="upload_video">Upload Video</string>
+    <string name="upload_audio">Upload Audio</string>
+    <string name="add_quote">Add Quote</string>
+    <string name="takeAction_infoPhoto">Snap a shot to take a stand. Selfies, wefies, welcomed</string>
+    <string name="takeAction_infoPhoto3">Max. 10MB file size</string>
+    <string name="takeAction_infoPhoto4">Include JPG or PNG format</string>
+    <string name="takeAction_infoPhoto5">Min. 500px X 500px resolution</string>
+    <string name="takeAction_infoVideo">Move the world through sound and motion.</string>
+    <string name="takeAction_infoVideo2">Max. 15 seconds</string>
+    <string name="takeAction_infoVideo3">Max. 10MB file size</string>
+    <string name="takeAction_infoVideo4">Include MP4 or MOV format</string>
+    <string name="takeAction_infoAudio">Stand on your crate, speak up and be heard!</string>
+    <string name="takeAction_infoAudio2">Max. 5MB file size</string>
+    <string name="takeAction_infoAudio3">Include MP3 or MP4 format</string>
+    <string name="takeAction_infoQuote">Words are the mightiest swords. Share your perspectives loud and clear.</string>
+    <string name="takeAction_thanksSupport">Thank you for your support to the</string>
+    <string name="takeAction_thanksSupport2">campaign</string>
+    <string name="takeAction_unsupportTitle">Unsupport Campaign</string>
+    <string name="takeAction_infoUnsupport">We promise to do better. We\'re sorry to see you go.</string>
+    <string name="takeAction_btnEdit">Edit</string>
+    <string name="title_activity_search_result">SearchResult</string>
+    <string name="title_activity_search_action_list">SearchActionList</string>
+    <string name="title_activity_search_campaign_list">SearchCampaignList</string>
+    <string name="title_activity_search_campaign_list_fragment">SearchCampaignListFragment</string>
+    <string name="milestones">Updates</string>
+    <string name="title_activity_profile_setting">General Information</string>
+    <string name="title_activity_explore">Explore</string>
+    <string name="title_activity_profile_detail">Changemaker</string>
+    <string name="title_activity_profile_detail_myprofile">My profile</string>
+    <string name="title_activity_create_campaign">New Campaign</string>
+    <string name="title_activity_faq_campaign">Frequently Asked Questions</string>
+    <string name="title_activity_create_campaign_step2">Launch Campaign</string>
+    <string name="title_activity_edit_campaign">Edit Campaign</string>
+    <string name="launcher_addCover">Display image choose</string>
+    <string name="launcher_readmore">Read more</string>
+    <string name="launcher_actionCountGoal">Action Count Goal</string>
+    <string name="launcher_optional">Optional</string>
+    <string name="launcher_endDate">End Date</string>
+    <string name="launcher_defEndDate">01/01/2016</string>
+    <string name="launcher_create">Create</string>
+    <string name="faq_title1">Create</string>
+    <string name="faq_title2">Create</string>
+    <string name="faq_title3">Create</string>
+    <string name="faq_desc1">Create</string>
+    <string name="faq_desc2">Create</string>
+    <string name="faq_desc3">Create</string>
+    <string name="title_activity_action_goal">Action Count Goal</string>
+    <string name="starter">Starter</string>
+    <string name="info_starter">For hyperlocal or intra-organization movements</string>
+    <string name="starter_number">250</string>
+    <string name="actions">Actions</string>
+    <string name="recommended">Recommended</string>
+    <string name="recommended_info">For movements with broad base of support</string>
+    <string name="recommended_number">1000</string>
+    <string name="custom">Custom</string>
+    <string name="custom_info">From zero to a billion. Be boldly realistic</string>
+    <string name="action_goal_info">Choose a target number of actions taken for your campaign. Choose a number  based on your target number of supporters. Having an active supporter base adds credibility to the campaign.</string>
+    <string name="join_campaign">Join Campaign</string>
+    <string name="support">Support Campaign</string>
+    <string name="supported">Supported</string>
+    <string name="title_activity_campaign_description">Descriptions</string>
+    <string name="campaign_title">Campaign Title</string>
+    <string name="campaign_description">Campaign Description</string>
+    <string name="campaign_description_aboutus">About</string>
+    <string name="campaign_btn_join">Join</string>
+    <string name="campaign_btn_add">Add</string>
+    <string name="campaign_btn_join_large">Join</string>
+    <string name="campaign_organized">Organized by</string>
+    <string name="campaign_tab_goals">Goals</string>
+    <string name="campaign_tab_community">Community</string>
+    <string name="campaign_tab_actions">Actions</string>
+    <string name="campaign_btn_act">Act</string>
+    <string name="campaign_label_private">This campaign is private.</string>
+    <string name="campaign_not_found">Campaign not found</string>
+    <string name="not_found">Not found</string>
+    <string name="retry">Retry</string>
+
+    <string name="profile_add_contact">Add</string>
+    <string name="profile_edit_contact">Edit</string>
+    <string name="profile_connected_info">Connected Info</string>
+    <string name="profile_about_facebook">Facebook</string>
+    <string name="profile_about_twitter">Twitter</string>
+    <string name="profile_about_instagram">Instagram</string>
+    <string name="profile_about_website">Website</string>
+    <string name="profile_about_interest">Campaign Interest</string>
+    <string name="profile_btn_add">Add</string>
+    <string name="profile_btn_requested">Requested</string>
+    <string name="profile_btn_chat">Chat</string>
+
+    <string name="action_share_facebook">Share to Facebook</string>
+    <string name="action_share_path">Share to Path</string>
+    <string name="action_share_twitter">Share to Twitter</string>
+    <string name="action_share_email">Share via Email </string>
+    <string name="action_share_whatsapp">Share to Whatsapp</string>
+
+
+    <string name="crash_toast_text">Error occured, please inform us</string>
+    <string name="crash_dialog_text">crash_dialog_text</string>
+
+    <string name="crash_dialog_title">crash_dialog_title</string>
+    <string name="crash_dialog_comment_prompt">crash_dialog_comment_prompt</string>
+    <string name="crash_user_email_label">crash_user_email_label</string>
+    <string name="crash_dialog_ok_toast">crash_dialog_ok_toast</string>
+
+
+    <string name="title_activity_join_photo">Upload Photo</string>
+    <string name="upload">Upload</string>
+    <string name="share">Share</string>
+    <string name="nominate_by">Nominate by</string>
+    <string name="description">Description</string>
+    <string name="include_a_caption">Include a caption...</string>
+    <string name="nominate_hint">Enter username or email</string>
+    <string name="comment_hint">Add a comment</string>
+
+    <string name="textComment">comment</string>
+    <string name="textComments">comments</string>
+    <string name="textHeart">heart</string>
+    <string name="textHearts">hearts</string>
+
+
+    <string name="title_activity_term_of_use">Terms of Service</string>
+    <string name="title_activity_faqactivity">FAQ</string>
+    <string name="title_activity_learn_more">Learn More</string>
+    <string name="title_activity_test_profile">TestProfileActivity</string>
+
+    <string name="profil_title_tab_started">Campaign</string>
+    <string name="profil_title_tab_starteds">Campaigns</string>
+    <string name="profil_title_tab_action_taken">Action</string>
+    <string name="profil_title_tab_actions_taken">Actions</string>
+    <string name="profil_title_tab_contact">Contact</string>
+    <string name="profil_title_tab_contacts">Contacts</string>
+    <string name="explore_title_tab_challenge">Challenge</string>
+
+    <string name="title_activity_detail_action_media">Detail Action Media</string>
+    <string name="title_activity_add_contacts">Find Contacts</string>
+
+    <string name="view_actions">View Actions</string>
+
+    <string name="all_action">All Actions</string>
+    <string name="photo">Photo</string>
+    <string name="video">Video</string>
+    <string name="audio">Audio</string>
+    <string name="quote">Quote</string>
+    <string name="instagram">Instagram</string>
+    <string name="twitter">Twitter</string>
+
+    <!--<string name="facebook_app_id">640884939365395</string> &lt;!&ndash; demo &ndash;&gt;-->
+    <string name="facebook_app_id">640445972655970</string>
+    <!-- live -->
+
+    <!--id google-->
+    <string name="server_client_id">352541370501.apps.googleusercontent.com</string>
+    <!--id google-->
+
+    <string name="title_activity_report_abuse">ReportAbuse</string>
+
+    <!-- FCuoT7zBt8CbwU2FaW9NmrpP9ow= -->
+    <!--<string name="facebook_app_id rony">640445972655970</string>-->
+    <!--<string name="facebook_app_id campaign">640884939365395</string>-->
+
+    <string name="sign_up_facebook">Connect with Facebook</string>
+    <string name="login_with_facebook">Log in with Facebook</string>
+    <string name="continue_with_facebook">Continue with Facebook</string>
+    <string name="notifications">Notifications</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="title_activity_take_action_web_view">Take Action</string>
+
+
+    <string name="seemore">See More</string>
+    <string name="choose_file">Choose File</string>
+    <string name="title_activity_report_abuse_user">ReportAbuseUser</string>
+    <string name="title_activity_profile_setting_web_view">ProfileSettingWebViewActivity</string>
+    <string name="title_activity_add_milestones">Add Update</string>
+    <string name="title_activity_add_challenge">Add Challenge</string>
+    <string name="title_activity_add_goals">Add Goal</string>
+    <string name="title_activity_add_goals_ach">Add achievement</string>
+    <string name="title_activity_edit_goals">Edit goal</string>
+    <string name="title_activity_edit_goals_achieved">Edit achievement</string>
+    <string name="title_activity_edit_milestones">Edit update</string>
+    <string name="title_activity_edit_challenge">Edit Challenge</string>
+    <string name="title_activity_add_feature">Add feature action</string>
+    <string name="Actions_Taken">Actions Taken</string>
+    <string name="add_milestones_actiontakeninfo">Set a number of actions taken and we will automatically set an update once it reached.</string>
+    <string name="Supporter_Number">Supporter Number</string>
+    <string name="textInfoSupporter">Same as Actions Taken Update.</string>
+    <string name="Featured_Action">Featured action</string>
+    <string name="Featured_Actions">Featured actions</string>
+    <string name="Featured_Campaigns">Featured Campaigns</string>
+    <string name="Featured_Action_Info">Feature an action by clicking on the Star icon when signed in or pasting the URL here:</string>
+    <string name="Write_Article">Write Article</string>
+    <string name="Write_Article_Info">All you need is a title, pictures and words to keep your community updated and well informed.</string>
+    <string name="Share_URL">Share URL</string>
+    <string name="Share_URL_Info">Its a big world and a lot is going on. Media coverage of the campaign, relevant news goes here.</string>
+
+    <string name="title_activity_add_milestones_web_view">AddMilestonesWebViewActivity</string>
+    <string name="title_activity_add_contacts_facebook">Find Contacts Facebook</string>
+    <string name="title_activity_add_contacts_twitter">Find Contacts Twitter</string>
+    <string name="title_activity_add_contacts_email">Find Contacts Email</string>
+    <string name="title_activity_take_action_web_view_type">TakeActionWebViewTypeActivity</string>
+    <string name="title_activity_take_action_image_preview">Take Action Image</string>
+    <string name="title_activity_take_action_image_upload">TakeActionImageUploadActivity</string>
+    <string name="title_activity_login_front">LoginFrontActivity</string>
+
+    <string name="title_issue_list">Issue Selection</string>
+
+    <string name="log_in_here">Log in here</string>
+    <string name="join_us">Join us</string>
+
+    <string name="alert_login_incorrect_email">Incomplete email</string>
+    <string name="alert_login_minimum_password">Your password must be at least 5 characters.</string>
+    <string name="alert_login_minimum_password2">Your password must be at least 5 characters.</string>
+    <string name="alert_login_please_fill">Please fill up the empty field.</string>
+    <string name="title_activity_explore_search">Explore Search</string>
+    <string name="alert_notif_external_link">URL not found</string>
+
+    <string name="all">All</string>
+    <string name="campaigns">Campaigns</string>
+    <string name="alert_login_incorrect_email_notactive">Your account is not activated. Please check your inbox.</string>
+    <string name="alert_login_please_enter_valid_email">Please entered a valid email address.</string>
+    <string name="alert_login_incorrect_email_notreg">Your email is not registered. Please Sign up.</string>
+    <string name="alert_sign_required">Required name</string>
+    <string name="alert_joinus_check_username">Your username must be al least 5 characters</string>
+    <string name="alert_joinus_username_already">This username isn\'t available. Please try another.</string>
+    <string name="textsuspend">Your account is not activated.\nPlease check your inbox.</string>
+    <string name="textsuspendnew">Your account is not activated. Please check your inbox.</string>
+    <string name="textpassword">Your password is incorrect.\nPlease try again.</string>
+    <string name="textpasswordnew">Your password is incorrect. Please try again.</string>
+    <!--kalau ganti text facebook jangan lupa cek java login dan signup-->
+    <string name="facebookInvalid">Your facebook account invalid.\nPlease Sign up for an account.</string>
+    <!--alert-->
+    <string name="alert_member_max">This group chat have reached the maximum number of contacts.</string>
+    <string name="alert_thankyou_feedback">Thank You for your feedback, we will reply by email shortly.</string>
+    <string name="alert_failed_submit">Failed to submit data</string>
+    <string name="alert_failed_submitLauncher">Failed to upload cover</string>
+    <string name="alert_try_again">TRY AGAIN</string>
+    <string name="alert_please_insert">Please insert empty field</string>
+    <string name="alert_manage_notif">Failed to update settings</string>
+    <string name="alert_are_you_sure">Are you sure?</string>
+    <string name="alert_sign_out">Are you sure want to log out?</string>
+    <string name="alert_leave_group">Are you sure want to leave this group?</string>
+    <string name="alert_remove_member">Are you sure want to remove this member?</string>
+    <string name="alert_remove_contact">Are you sure want to remove this contact?</string>
+    <string name="alert_delete">Are you sure want to delete?</string>
+    <string name="alert_approv_campaign">Are you sure want to approve this campaign?</string>
+    <string name="alert_del_approv_campaign">Are you sure want to reject this campaign?</string>
+    <string name="alert_delete_message_comm">Are you sure want to delete this comment?</string>
+    <string name="alert_delete_message">Are you sure want to delete this chat?</string>
+    <string name="alert_edit_update">Are you sure want to edit this goal?</string>
+    <string name="alert_delete_goal">Are you sure want to delete this goal?</string>
+    <string name="alert_please_try_again">Please try again!</string>
+    <string name="alert_please_try_again_file_corrupt">The image was not completely uploaded. Please try again!</string>
+    <string name="alert_copy_clip">Copied to Clipboard!</string>
+    <string name="alert_pick_minimum_issue">Please choose campaign interest.</string>
+    <string name="alert_please_fill_name">Please fill up your name.</string>
+    <string name="alert_please_fill_username">Please fill the username.</string>
+    <string name="alert_please_fill_username_new">Please choose a username.</string>
+    <string name="alert_please_fill_username_at_least">Your username must be at least 5 characters.</string>
+    <string name="alert_please_fill_phone_at_least">Your username must be at least 5 characters.</string>
+    <string name="alert_please_choose_year">Please choose year of birth.</string>
+    <string name="alert_please_choose_gender">Please choose gender.</string>
+    <string name="alert_please_choose_country">Please choose country.</string>
+    <string name="alert_please_log_out">Log out ?</string>
+    <string name="alert_please_launch_title">Are you sure?</string>
+    <string name="alert_please_launch">All progress will be lost.</string>
+    <string name="alert_please_take_action">All changes will be lost.</string>
+    <string name="alert_profile_switch_private_title">Switch to Private Account?</string>
+    <string name="alert_profile_switch_private">When your account is private, only people you approve can see your actions.</string>
+    <string name="alert_profile_switch_public_title">Switch to Public Account?</string>
+    <string name="alert_profile_block">Are you sure?</string>
+    <string name="alert_profile_switch_public">Anyone will be able to see your actions. You will no longer need to approve contacts.</string>
+    <string name="alert_campaign_switch_private_title">Switch to Private Campaign?</string>
+    <string name="alert_campaign_switch_private">When your campaign is private, only people you approve can join and take action to your campaign.</string>
+    <string name="alert_campaign_switch_public_title">Switch to Public Campaign?</string>
+    <string name="alert_campaign_switch_public">Anyone will be able to join and take action on your campaign.</string>
+    <string name="alert_approve_requested">This Changemaker asks to be added as your contact.</string>
+    <string name="alert_cancel_requested">Cancel request?</string>
+    <string name="alert_btn_approve">Approve</string>
+    <string name="alert_btn_decline">Decline</string>
+    <string name="alert_btn_yes">Yes</string>
+    <string name="alert_btn_no">No</string>
+    <string name="alert_btn_cancel">Cancel</string>
+    <string name="alert_btn_ok">Ok</string>
+    <string name="alert_photoeditor_close">All changes will be lost.</string>
+    <string name="alert_finishing_up">Finishing up</string>
+    <string name="alert_will_automatically">Will automatically post when possible.</string>
+    <string name="alert_file_cannotAccess">The file can\'t be accessed, check your storage permission.</string>
+    <string name="alert_delete_message_act">Are you sure want to delete this action?</string>
+    <string name="alert_file_does_not_exist">File does not exist.</string>
+    <string name="alert_hashtag_unAvailable">Hashtag is unavailable.</string>
+    <string name="addLocation">Add location</string>
+
+    <!--clipboard-->
+    <string name="clip_copy">Copy Text</string>
+    <string name="clip_copy_new">Copy</string>
+    <string name="clip_delete">Delete</string>
+    <string name="clip_reply">Reply</string>
+    <string name="clip_delete_goal">Delete this goal</string>
+    <string name="button_save">Save</string>
+    <string name="button_yes">Yes</string>
+    <string name="button_no">No</string>
+    <string name="chat_type_message">Type a message</string>
+    <string name="chat_joined">Joined</string>
+    <string name="chat_invitation">Invitation to join</string>
+
+    <string name="title_activity_single_chat">SingleChatActivity</string>
+    <string name="action_created_by">Created by</string>
+    <string name="action_created">created</string>
+    <string name="title_activity_group_detail">Group info</string>
+    <string name="group_admin">Group admin</string>
+    <string name="new_group">New group</string>
+    <string name="send_to">Send to</string>
+    <string name="exit_group">Leave group</string>
+
+    <string name="members">Members</string>
+    <string name="action_search_member">Search member...</string>
+    <string name="mute">Mute</string>
+    <string name="title_activity_room_chat">ChatroomChatActivity</string>
+    <string name="action_group_name">Group name</string>
+    <string name="action_search_by_name">Search by name</string>
+    <string name="new_action_search_by_name">Search</string>
+    <string name="title_activity_search_contact">Search</string>
+    <string name="action_create">Create</string>
+    <string name="action_invite">INVITE</string>
+    <string name="title_activity_select_contact">Select contact</string>
+
+    <string name="campaignpage_view_action_empty">Share your amazing campaign with the world and encourage them to take action for it now!</string>
+    <string name="search_placeholder">Search</string>
+    <string name="new_search_placeholder">Search</string>
+
+    <string name="popup_view_action_view_all">View all</string>
+    <string name="popup_view_action_photo">Photo</string>
+    <string name="popup_view_action_video">Video</string>
+    <string name="popup_view_action_audio">Audio</string>
+    <string name="popup_view_action_quote">Quote</string>
+    <string name="popup_view_action_instagram">Instagram</string>
+    <string name="popup_view_action_twitter">Twitter</string>
+    <string name="popup_view_report">Report</string>
+    <string name="popup_view_report_miles">Report update</string>
+    <string name="popup_view_report_user">Report user</string>
+    <string name="title_activity_report_abuse_milestone">Report abuse update</string>
+
+    <string name="organizer">Organizer</string>
+    <string name="organizers">Organizers</string>
+    <string name="message">Chats</string>
+    <string name="new_message_select_contact">New chat</string>
+    <string name="title_activity_organizers">Organizers activity</string>
+    <string name="popup_view_invite">Invite</string>
+    <string name="popup_view_invitecontacts">Invite contacts</string>
+    <string name="popup_view_sharecamp">Share campaign</string>
+    <string name="popup_view_report_camp">Report campaign</string>
+    <string name="popup_view_edit">Edit</string>
+    <string name="popup_view_edit_camp">Edit campaign</string>
+    <string name="popup_view_add_goal">Goal</string>
+    <string name="popup_view_add_achievement">Achievement</string>
+    <string name="popup_view_add_update">Update</string>
+    <string name="popup_view_add_challenge">Challenge</string>
+    <string name="popup_view_add_action">ACT</string>
+    <string name="popup_view_add_action_small">Act</string>
+    <string name="title_activity_report_abuse_campaign">ReportAbuseCampaign</string>
+    <string name="welcome_back">Welcome Back!</string>
+    <string name="year_of_birth">Year of Birth</string>
+    <string name="gender">Gender</string>
+    <string name="country">Country</string>
+
+    <string name="popup_view_action_edit_miles">Edit update</string>
+    <string name="popup_view_feature">Feature</string>
+    <string name="popup_view_action_add_miles">Feature action</string>
+    <string name="popup_view_action_remove_miles">Remove update</string>
+    <string name="popup_view_action_hide_action">Hide action</string>
+    <string name="popup_view_action_report_action">Report action</string>
+    <string name="popup_view_action_report_user">Report user</string>
+    <string name="popup_view_action_remove_action">Remove action</string>
+    <string name="popup_view_action_share_action">Share action</string>
+    <string name="popup_view_susp_acoun_activ">Suspicious Account Activity</string>
+    <string name="popup_view_eliciting">Eliciting Violent Behavior</string>
+    <string name="popup_view_porno">Pornographic Material</string>
+    <string name="popup_view_hate">Hate Speech</string>
+    <string name="popup_view_spam">Spam</string>
+
+    <string name="no_results_found">No results found</string>
+    <string name="title_activity_issue">Issue</string>
+    <string name="no_comment_result">Write a comment to let the world know how you feel!</string>
+    <string name="load_earlier_messages">Load Earlier Messages</string>
+    <string name="load_more">Load more</string>
+    <string name="popup_view_remove_miles">Remove update</string>
+    <string name="popup_view_remove">Remove</string>
+    <string name="popup_view_edit_user">Edit update</string>
+    <string name="popup_view_share">Share</string>
+    <string name="popup_view_share_update">Share update</string>
+    <string name="popup_profile_about">About</string>
+    <string name="popup_profile_share">Share</string>
+    <string name="popup_profile_remove_contact">Remove contact</string>
+    <string name="popup_view_add">Add</string>
+    <string name="popup_profile_add_contact">Add contact</string>
+    <string name="popup_profile_unblock_contact">Unblock</string>
+    <string name="popup_profile_report_user">Report User</string>
+    <string name="popup_profile_edit">Edit profile</string>
+    <string name="popup_profile_block">Block</string>
+    <string name="popup_profile_unblock">Unblock</string>
+    <string name="popup_profile_blocked">Blocked</string>
+    <string name="title_activity_profile_about">ProfileAbout</string>
+    <string name="title_profile_no_campaign1">No campaigns supported yet.</string>
+    <string name="title_profile_no_campaign2">What are you waiting for?</string>
+    <string name="title_profile_takeone">Take one now!</string>
+    <string name="title_profile_no_action1">Your one action can be a big step</string>
+    <string name="title_profile_no_action2">to change the world.</string>
+    <string name="title_profile_no_contact1">Change requires many hands.</string>
+    <string name="title_profile_no_contact2">Connect with others now!</string>
+    <string name="title_topic_AnimalLife">Animal Life</string>
+    <string name="title_profile_no_ChildRights">Child Rights</string>
+    <string name="title_profile_no_CitiesCommunities">Cities &amp; Communities</string>
+    <string name="title_profile_no_ClimateAction">Climate Action</string>
+    <string name="title_profile_no_Education">Education</string>
+    <string name="title_profile_no_Health">Health</string>
+    <string name="title_profile_no_GenderEquality">Gender Equality</string>
+    <string name="title_profile_no_InfrastructureInnovation">Infrastructure &amp; Innovation</string>
+    <string name="title_profile_no_Marketing">Marketing</string>
+    <string name="title_profile_no_MinorityRights">Minority Rights</string>
+    <string name="title_profile_no_Politics">Politics</string>
+    <string name="title_profile_no_WaterSanitation">Water &amp; Sanitation</string>
+    <string name="Choose_year">Choose Year of Birth</string>
+    <string name="Choose_gender">Choose Gender</string>
+    <string name="Choose_Female">Female</string>
+    <string name="Choose_Male">Male</string>
+    <string name="Choose_Other">Other</string>
+    <string name="Choose_country">Choose country</string>
+    <string name="profile_message">Message</string>
+
+    <string name="no_campaigns_found">No campaigns found</string>
+    <string name="no_milestones_found">No updates found</string>
+    <string name="no_challenges_found">No challenges found</string>
+    <string name="no_actions_found">No actions found</string>
+    <string name="no_contacts_found">No contacts found</string>
+
+    <string name="pull_to_refresh_pull_label">Pull to refresh...</string>
+    <string name="pull_to_refresh_release_label">Release to refresh...</string>
+    <string name="pull_to_refresh_refreshing_label">Loading...</string>
+    <string name="pull_to_refresh_tap_label">Tap to refresh...</string>
+    <string name="title_activity_add_launcher">Launch Campaign</string>
+    <string name="title_activity_change_password">ChangePassword</string>
+
+    <string name="title_activity_login_thank_you">Thank You</string>
+
+
+    <string name="view_all">View All</string>
+
+    <string name="thank_you">Thank you!</string>
+
+    <string name="success_sign_up">One more step.. Please check your inbox to activate your account</string>
+    <string name="success_reset_password">One more step.. Please check your inbox to reset your password</string>
+    <string name="success_contactus">Your feedback is important to us. We will reply to you as soon as possible, when necessary.</string>
+
+    <string name="thank_you_for_report">For your report</string>
+    <string name="title_activity_edit_launcher">EditLauncherActivity</string>
+
+    <string name="popup_view_notif_all">All Notifications</string>
+    <string name="popup_view_notif_hearts">Hearts</string>
+    <string name="popup_view_notif_comments">Comments</string>
+    <string name="popup_view_notif_support">Join</string>
+    <string name="popup_view_notif_action">Actions</string>
+    <string name="popup_view_notif_shares">Shares</string>
+    <string name="popup_view_notif_updates">Updates</string>
+    <string name="popup_view_notif_contacts">Contacts</string>
+    <string name="title_activity_manag_notif">ManagNotif</string>
+    <string name="title_push_notification">Push Notification</string>
+    <string name="title_push_notification_detail">Get the latest updates sent right to your phone.</string>
+    <string name="title_email_notification">Email Notification</string>
+    <string name="title_email_notification_detail">Configure which updates you will get from us, including CAMPAIGN newslatters.</string>
+    <string name="title_activity_pust_notif_setting">PustNotifSetting</string>
+    <string name="manage_pushnotif_connect">a changemakers connected with me</string>
+    <string name="manage_pushnotif_message">a changemakers sent me a message</string>
+    <string name="manage_pushnotif_heart">a changemakers left a heart on my action, update, goal or achievement</string>
+    <string name="manage_pushnotif_comment">a changemakers commented on my action, update, goal or achievement</string>
+    <string name="manage_pushnotif_share">a changemakers shared my action, update, goal, achievement or campaign</string>
+    <string name="manage_pushnotif_supportmycamp">a changemakers joined my campaign</string>
+    <string name="manage_pushnotif_supportmycontact">my contact took an action</string>
+    <string name="manage_pushnotif_actiontakenmycontact">a changemakers took an action for my campaign</string>
+    <string name="manage_pushnotif_actiontakenmycampaign">Action taken for my campaign</string>
+    <string name="manage_pushnotif_newupdate">there is any update, goal or achievement on a campaign i\'\ve joined</string>
+    <string name="manage_pushnotif_notif">No new notifications</string>
+    <string name="title_activity_error404">Error404</string>
+    <string name="title_activity_error404_new">Error 404</string>
+    <string name="error404">This page has been abducted.</string>
+    <string name="error4041">It might be on Mars or Pluto. Either way you can explore the galaxy. Or go back Home.</string>
+    <string name="error4042">This content had been removed.</string>
+    <string name="error4043">Page not found</string>
+    <string name="title_activity_error_campaign">ErrorCampaign</string>
+    <string name="title_activity_campaign_avail">It\'s Available!</string>
+    <string name="title_activity_campaign_avail1">The hashtag is up for grabs.</string>
+    <string name="title_activity_campaign_avail2">Feel free to start a new campaign!</string>
+    <string name="title_activity_edit_milestones_web_view">EditUpdatesWebViewActivity</string>
+    <string name="title_activity_email_notif_setting">EmailNotifSetting</string>
+    <string name="popup_view_view">View</string>
+    <string name="popup_view_delete">Delete</string>
+    <string name="popup_view_block">Block</string>
+    <string name="popup_view_info">Info</string>
+    <string name="popup_view_clear">Clear</string>
+    <string name="popup_view_mute">Mute</string>
+    <string name="popup_view_unmute">Unmute</string>
+    <string name="popup_view_chat">Chat</string>
+    <string name="popup_singlechat_righttop_viewprofile">View Profile</string>
+    <string name="popup_singlechat_righttop_clearconvers">Clear Conversation</string>
+    <string name="popup_singlechat_righttop_deletechat">Delete Chat</string>
+    <string name="popup_singlechat_righttop_removecontact">Remove Contact</string>
+    <string name="popup_singlechat_righttop_addcontact">Add Contact</string>
+    <string name="popup_singlechat_righttop_blockcontact">Block Contact</string>
+    <string name="popup_singlechat_righttop_unblockcontact">Unblock Contact</string>
+    <string name="popup_singlechat_righttop_reportuser">Report User</string>
+    <string name="popup_singlechat_righttop_reportuser2">Report User</string>
+    <string name="popup_multiplechat_righttop_groupinfo">Group Info</string>
+    <string name="popup_multiplechat_righttop_leave">Leave Group</string>
+    <string name="popup_multiplechat_righttop_mute">Mute Notifications</string>
+    <string name="popup_multiplechat_righttop_unmute">Unmute Notifications</string>
+    <string name="popup_multiplechat_righttop_clearconvers">Clear Conversation</string>
+    <string name="popup_groupchat_removemember">Remove Member</string>
+    <string name="chat_unsend">Delete</string>
+    <string name="alert_unsend_message">Are you sure want to delete this chat?</string>
+    <string name="alert_clear_conversation"> If you clear conversation, all messages will be deleted. Are you sure?</string>
+
+
+    <string name="alert_delete_chat"> If you delete chat, all messages will be deleted. Are you sure?</string>
+
+    <string name="toast_after_support">Make that next step, support too!</string>
+    <string name="toast_after_take_action">Make that next step, take action too!</string>
+    <string name="toast_after_launch">Make that next step, launch campaign now!</string>
+
+    <string name="alert_login_email_already_used">Email already used. Please <b>Log in</b> using that email.</string>
+    <string name="alert_login_suspended">Your account has been under review. Please <b>Contact Us</b> for more information.</string>
+    <string name="alert_suspended">Your account has been under review. Please</string>
+    <string name="Please">Please</string>
+    <string name="contactus">\ Contact us \ </string>
+    <string name="forinformation">for more information.</string>
+
+    <string name="popup_view_susp_acoun_annoy">This user is annoying</string>
+    <string name="popup_view_susp_acoun_pretending">This user is pretending to be me or someone I know</string>
+    <string name="popup_view_susp_acoun_represent">This user represents a business or an organization</string>
+    <string name="popup_view_susp_acoun_fake">This user is fake account</string>
+    <string name="title_activity_detail_milestone_webview">DetailUpdateWebview</string>
+
+    <string name="mute_notifications">Mute Notifications</string>
+    <string name="add_people">Add People</string>
+    <string name="add_people_find_contact1">Connect with other changemakers</string>
+    <string name="add_people_find_contact2">and build the conversation.</string>
+    <string name="member">Member</string>
+
+    <string name="add_contacts">Find contacts</string>
+    <string name="contact_add">Contact added</string>
+    <string name="contact_add_text1">You can now</string>
+    <string name="contact_add_text2">message &amp; organize</string>
+
+    <string name="title_activity_add_miles_web_view_list">AddMilesWebViewListActivity</string>
+    <string name="title_activity_list_action_to_add_featured">ListActionToAddFeaturedActivity</string>
+    <string name="find_contacts">Find contacts</string>
+    <string name="notification_side">Push notifications</string>
+    <string name="changeCountry">Change country</string>
+    <string name="changePassword">Change password</string>
+    <string name="contactUs">Contact us</string>
+    <string name="logOut">Log out</string>
+    <string name="curr_pass">Current Password</string>
+    <string name="why_do_you_report">Why do you report?</string>
+    <string name="title_profile_no_campaign_other">No campaigns supported.</string>
+    <string name="title_profile_no_action_other">No actions taken</string>
+    <string name="title_profile_no_contact_other">No contacts added.</string>
+    <string name="title_activity_profile_edit">Edit profile</string>
+    <string name="alert_sending_photo_editor">Sending...</string>
+    <string name="alert_sending_photo_editor_take_action">Processing...</string>
+
+
+    <string name="personal">Personal details</string>
+    <string name="bio">About me</string>
+    <string name="pro_name">Name</string>
+    <string name="pro_name_hint">Name</string>
+    <string name="pro_username">Username</string>
+    <string name="pro_username_hint">Username</string>
+    <string name="pro_email">Email</string>
+    <string name="pro_email_hint">Email</string>
+    <string name="pro_phone_number">Phone</string>
+    <string name="pro_phone_number_hint">Phone number</string>
+    <string name="pro_type">Type</string>
+    <string name="pro_facebook">Facebook</string>
+    <string name="pro_facebook_hint">https://www.facebook.com/CampaignID/</string>
+    <string name="pro_instagram">Instagram</string>
+    <string name="pro_instagram_hint">https://www.instagram.com/campaign_id</string>
+    <string name="pro_twitter">Twitter</string>
+    <string name="pro_twitter_hint">https://www.twitter.com/campaign_ID/</string>
+    <string name="pro_website">Website</string>
+    <string name="pro_website_hint">https://www.campaign.com/</string>
+    <string name="pro_changephoto">Change photo</string>
+    <string name="pro_notfound">Changemaker not found</string>
+    <string name="pro_url_notfound">URL image not found.</string>
+    <string name="contacts">Contact info</string>
+    <string name="pro_alert_username">This username isn\'t available. Please try another.</string>
+
+    <string name="new_message">New Message</string>
+    <string name="btnPost">Post</string>
+
+    <string name="to">To:</string>
+    <string name="invalid_email">Invalid Email</string>
+    <string name="issues">Issues</string>
+    <string name="pick_minimum_issue">Pick a minimum of 3</string>
+    <string name="error_email_not_found">Sorry, we can\'t find email apps</string>
+    <string name="alert_reset_password_success">Please check your inbox and following the next step</string>
+    <string name="emoji_size_actual">35</string>
+
+    <string name="emoji_size_act">50</string>
+    <string name="button_description">Button</string>
+    <string name="title_activity_profile_contact_add">ProfileContactAdd</string>
+
+    <string name="your_support_spurs_change">Your support spurs change!</string>
+
+    <string name="closed">This campaign is closed</string>
+    <string name="coming_soon">Coming Soon!</string>
+    <string name="upcomming">Upcoming</string>
+
+    <string name="title_activity_take_action_audio">Upload Audio</string>
+    <string name="submit">Submit</string>
+
+    <string name="take_action_audio_desc_hint">Write a caption that captivaties and inspire others to share or take action.</string>
+
+    <string name="title_activity_take_action_quote">Add Quote</string>
+    <string name="write_your_quote">Write your quote</string>
+    <string name="take_action_quote_desc_hint">Inspirations, opinions, perspectives, words. Share them here!</string>
+
+    <string name="title_activity_take_action_video">Upload video</string>
+    <string name="take_action_video_desc_hint">Write a caption that captivaties and inspire others to share or take action.</string>
+
+    <string name="unsupport_campaign_title">Unsupport Campaign</string>
+    <string name="unsupport_campaign_ask">Are you sure you want to Unsupport this campaign?</string>
+
+    <string name="title_activity_take_action_photo">Upload Photo</string>
+    <string name="take_action_photo_desc_hint">Write a caption that captivaties and inspire others to share or take action.</string>
+
+    <string name="TakeActionLabel">What can we do?</string>
+
+    <string name="Hashtag_label">#Hashtag</string>
+    <string name="label_hashtag_name_campaign_desc">Name your campaign. Something powerful and catchy.</string>
+    <string name="GoalNumLabel">Goal #</string>
+    <string name="AchievedLabel">Goal achieved!</string>
+    <string name="AcceptChallenge">Accept this challenge?</string>
+    <string name="UpdateLabel">Update</string>
+    <string name="HubLabel">Hub</string>
+    <string name="UpdateLabelLarge">Update</string>
+    <string name="ChallengeLabelLarge">Challenge</string>
+    <string name="GoalLabel">Goal</string>
+    <string name="GoalsLabel">Goals</string>
+    <string name="NoGoalLabel">No goals</string>
+    <string name="NoActionLabel">No actions</string>
+    <string name="NoCampaignLabel">No campaign</string>
+    <string name="GoalAchieved">Goal achieved</string>
+    <string name="TitleLabel">Title</string>
+    <string name="TitleDescLabel">State your overall objective for your campaign.</string>
+    <string name="DescriptionLabel">Description</string>
+    <string name="DescriptionLabel2">Make sure it specific, measurable, achievable, relevant, timely for your campaigns.</string>
+    <string name="ActionAllowLabel">Actions Allowed</string>
+    <string name="ActionTakenLabel">Actions Taken Goal</string>
+    <string name="CatLabel">Type</string>
+    <string name="DescriptionLabelDesc">Tell us what your campaign is all about and what you\'re trying to change.</string>
+    <string name="ActionAllowLabelDesc">Choose the actions your community can take.</string>
+    <string name="ActiontakenLabelDesc">Actions taken mean more than words. Set a goal for your supporters.</string>
+    <string name="CatLabelDesc">Choose the type of your campaign (minimum 1).</string>
+    <string name="CountryLabel">Countries</string>
+    <string name="StatusLabel">Campaign Status</string>
+    <string name="DescStartCamp">No character limit. But breaks are great for easy reading.</string>
+    <string name="CountryLabelDesc">Select the countries where your campaign is focused in.</string>
+    <string name="Letsgo">Let\'s Go</string>
+    <string name="alert_hook_minimum_character">Your hashtag needs at least 8 characters</string>
+    <string name="alert_title_minimum_character">Max. 100 characters.</string>
+    <string name="ActionDescriptionLabelDesc">Create a simple &amp; symbolic action for your community to take.</string>
+    <string name="ActionDescriptionLabelDescHint">This call-to-action will be added automatically to every subsequent update.</string>
+    <string name="ActionDescriptionLabel">What can we do?</string>
+    <string name="alert_taken_minimum_character">Max. 8 characters.</string>
+    <string name="water">Water &amp; Sanitation</string>
+    <string name="About_What_can">What can we do?</string>
+    <string name="About_Join_us">Join us!</string>
+    <string name="About_Focus_Countries">Focus countries</string>
+    <string name="About_CampaignIssues">Campaign type</string>
+    <string name="New_About_CampaignIssues">Type</string>
+    <string name="pro_campaign">Campaign Interest</string>
+    <string name="pro_campaignOther">Other</string>
+    <string name="pro_campaignOtherDesc">Choose the type of campaigns that interest you.</string>
+    <string name="selectall">Select all</string>
+    <string name="pro_campaign_private">Private profile</string>
+    <string name="camp_campaign_private">Private campaign</string>
+    <string name="Replying_to">Replying to</string>
+
+
+    <string name="issue_getStarted">What type of campaigns\nare you interested in?</string>
+    <string name="issue_3issues">Pick at least 3 issues that interest you</string>
+    <string name="issue_1picked">That\'s strong start, pick another...</string>
+    <string name="issue_2picked">That\'s important to us too, choose one more?</string>
+    <string name="alert_pick_max_issue">Maximum of 5 issues.</string>
+    <string name="thankyoudescAction">Your action taken spurs change!</string>
+    <string name="title_activity_error_no_active_camp">ErrorNoActiveCamp</string>
+    <string name="title_activity_select_add_people">Add people</string>
+    <string name="title_activity_select_add_">Add</string>
+    <string name="issues_selection">Issues Selections</string>
+
+    <string name="empty_directory">Empty Directory</string>
+    <string name="storage_removed">Storage was removed or unmounted.</string>
+    <string name="error_selecting_file">Error selecting File</string>
+    <string name="internal_storage">Internal storage</string>
+    <string name="chooser_title">Choose File</string>
+
+    <string name="title_activity_detail_action_view_activity_new">DetailActionViewActivityNew
+    </string>
+    <string name="Set_Date">Set Date</string>
+    <string name="What_can">Action Description (What Can We Do?)</string>
+    <string name="LabelAddMIlestoneArticlePhotoDesc">Add a maximum of 5 pictures</string>
+    <string name="title_activity_add_milestone_number">Set Action Goal</string>
+    <string name="title_activity_add_milestone_supporter">Set Supporter Goal</string>
+    <string name="title_activity_add_milestone_external_link">Share External Link</string>
+    <string name="alert_pick_min_issue">Please Pick Issue</string>
+    <string name="title_activity_add_milestone_feature">Feature An Action</string>
+    <string name="DragPinch">Drag to position. Pinch to zoom.</string>
+    <string name="update_decription">Educate, inform and motivate your community with a short update. Include an external link if you want.</string>
+    <string name="add_achievement_decription">Inform your community about the good news!</string>
+    <string name="update_decription_what">This call-to-action was added automatically. You can make edits too!</string>
+    <string name="update_decription_add_achievement">Inform your community about the good news!</string>
+
+
+    <string name="manage_emailnotif_account">Account Activity</string>
+    <string name="manage_emailnotif_campaign">Campaign Activity</string>
+    <string name="manage_emailnotif_update">Update Activity</string>
+    <string name="manage_emailnotif_action">Action Activity</string>
+    <string name="manage_emailnotif_message">Message Activity</string>
+    <string name="manage_emailnotif_report">Report Activity</string>
+    <string name="manage_emailnotif_newsletter">Newsletter</string>
+    <string name="title_activity_edit_milestone_external_link">EditMilestoneExternalLink</string>
+
+    <string name="no_internet_connection">No Internet Connection</string>
+    <string name="new_no_internet_connection">No internet connection</string>
+    <string name="something_wrong">Oops.. Something went wrong.</string>
+    <string name="something_wrong2"> Please try again.</string>
+    <string name="not_join_this_group">Group is not available for you</string>
+
+    <string name="title_activity_edit__milestone__action_target">Edit Action Goal</string>
+    <string name="title_activity_edit_milestones_supporter_target">Edit Supporter Goal</string>
+    <string name="title_activity_edit_milestone_feature_action">Edit feature action</string>
+    <string name="title_activity_edit_milestone_article">Edit Update </string>
+
+    <string name="text_add_update_target">When achieved, we will set a update automatically for you.</string>
+    <string name="text_add_update_target_number">Target number of actions taken</string>
+    <string name="text_add_update_supporter_number">Target number of supporters</string>
+    <string name="text_add_update_personalize">Personalize the update with a short title</string>
+    <string name="text_add_update_celebrate">Celebrate the moment with your supporters!</string>
+
+    <string name="text_go_to_hub">Go To Hub</string>
+    <string name="text_create_something_forchange">Create something new #forchange!</string>
+    <string name="text_no_longer_active">This campaign is no longer active.</string>
+    <string name="text_Sorry">Sorry</string>
+    <string name="findOnFB_Contacts_text"> Don’t miss the stories your friends are recommending on Campaign.com</string>
+    <string name="sharewith">Share with</string>
+    <string name="title_activity_redirect_url">RedirectURL</string>
+    <string name="title_activity_take_action_photo_activity__crop">TakeActionPhotoActivity_Crop
+    </string>
+    <string name="title_activity_add_launcher_cover_crop">AddLauncherCoverCrop</string>
+    <string name="title_activity_submit_email">SubmitEmail</string>
+    <string name="title_activity_submit_email_thank_you">SubmitEmailThankYou</string>
+
+    <string name="share_email_subject">Be part of this important step</string>
+    <string name="share_email_message">Join me and take action for this campaign now!</string>
+    <string name="share_email_message_campaign">Join me to learn about this campaign and take action now!</string>
+    <string name="share_twitter">Join me and lend your voice to this campaign now!</string>
+    <string name="title_activity_chat_all_firebase">ChatAllFirebase</string>
+    <string name="title_activity_single_chat_firebase">SingleChatFirebase</string>
+    <string name="message_notif_added_you">added you</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="comment_contact_us">Send us any questions</string>
+    <string name="title_activity_login_front_activity_new">LoginFrontActivityNew</string>
+    <string name="title_activity_tutorial">TutorialActivity</string>
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="title_activity_take_action_activity_v2">TakeActionActivityV2</string>
+    <string name="title_activity_campaign_page_activity_firebase">CampaignPageActivityFirebase</string>
+
+    <string name="text_upd_addlink">Keep your community informed with the latest updates</string>
+    <string name="text_upd_addlink_title">Add Link From Web</string>
+    <string name="text_upd_setdate">Set Date</string>
+    <string name="text_upd_setdate_hint">Pick A Date</string>
+    <string name="text_upd_settitle_hint">Keep it factual and short!</string>
+    <string name="new_text_upd_settitle_hint">Showcase this action to your community.</string>
+    <string name="text_upd_what_can">This call-to-action was added automatically. You can make edits too!</string>
+    <string name="text_upd_feature_action">Showcase this action to your community.</string>
+    <string name="text_upd_feature_action_hint">Max 100 characters.</string>
+    <string name="text_upd_description_title">Highlight the uniqueness of featured action to inspire change.</string>
+    <string name="text_upd_description_hint">No character limit. \nBut breaks are great for easy reading.</string>
+    <string name="camp_upload_cover">Upload cover</string>
+    <string name="title_activity_profile_tab_campaign">ProfileTabCampaign</string>
+    <string name="title_activity_profile_tab_contact">ProfileTabContact</string>
+
+    <string name="thankyou_forgot_title">Thank you.</string>
+    <string name="thankyou_forgot_title_new">Thank you</string>
+    <string name="thankyou_forgot_desc">One more step. Please check your inbox to reset your password.</string>
+    <string name="thankyou_forgot_link">Go to Inbox</string>
+    <string name="thankyou_signup_title">Thank you.</string>
+    <string name="thankyou_signup_desc">One more step. Please check your inbox to activate your account.</string>
+    <string name="thankyou_signup_link">Go to Inbox</string>
+    <string name="no_result_notif_title">Keep updated from the campaigns you joined and your contacts.</string>
+    <string name="no_result_notif_findContact">Add your Facebook\nfriends on Campaign.com.</string>
+    <string name="no_result_notif_desc">Remember to allow push notifications.</string>
+    <string name="no_result_notif_link_1">Find Contacts</string>
+    <string name="no_result_notif_link_2">Explore</string>
+    <string name="no_result_explore">Be the first to start a\ncampaign in your country!</string>
+    <string name="no_result_home">Welcome Changemakers!</string>
+    <string name="no_result_home_desc">Let\'s find some exciting campaigns for you to join!</string>
+    <string name="title_activity_campaign_interest">CampaignInterest</string>
+    <string name="findContact_phonebook">Phonebook</string>
+    <string name="findContact_facebook">Facebook</string>
+    <string name="conn_fb_new">Connect Facebook</string>
+    <string name="no_result_chat_title">Connect with other changemakers.</string>
+    <string name="no_result_chat_desc">Message them privately or in group chats.</string>
+
+    <string name="no_result_profile_title">Welcome Changemakers!</string>
+    <string name="no_result_profile_desc">Let\'s find some exciting campaigns for you to join!</string>
+
+    <string name="no_block_profile_title">No activity yet.</string>
+    <string name="no_block_profile_desc"></string>
+    <string name="no_private_profile_title">This Account is Private.</string>
+    <string name="no_private_profile_desc">Add this contact to chat with them and to see their activity.</string>
+    <string name="no_private_campaign_title">This Campaign is Private.</string>
+    <string name="no_private_campaign_desc">Join the community to take action.</string>
+
+    <string name="report_campaign_desc">As we take every single report seriously, please provide specific details.</string>
+    <string name="title_activity_redirect_url_browser">RedirectUrlBrowser</string>
+
+    <string name="error_drm_not_supported">Protected content not supported on API levels below 18</string>
+    <string name="font_default">raleway_reg.ttf</string>
+    <string name="font_default_bold">raleway_bold.ttf</string>
+    <string name="font_default_extrabold">raleway_extrabold.ttf</string>
+    <string name="error_drm_unsupported_scheme">This device does not support the required DRM scheme</string>
+
+    <string name="error_drm_unknown">An unknown DRM error occurred</string>
+
+    <string name="error_no_decoder">This device does not provide a decoder for <xliff:g id="mime_type">%1$s</xliff:g></string>
+
+    <string name="error_no_secure_decoder">This device does not provide a secure decoder for <xliff:g id="mime_type">%1$s</xliff:g></string>
+
+    <string name="error_querying_decoders">Unable to query device decoders</string>
+
+    <string name="error_instantiating_decoder">Unable to instantiate decoder <xliff:g id="decoder_name">%1$s</xliff:g></string>
+
+    <string name="error_unsupported_video">Media includes video tracks, but none are playable by this device</string>
+
+    <string name="error_unsupported_audio">Media includes audio tracks, but none are playable by this device</string>
+    <string name="title_activity_list_invite_contact">ListInviteContact</string>
+    <string name="comm_mutual">Mutual</string>
+    <string name="comm_invited">Invited</string>
+    <string name="comm_community">Community</string>
+    <string name="title_contact_request">Contact requests</string>
+    <string name="title_campaign_request">Campaign requests</string>
+    <string name="text_confirm_delete_request">Confirm or delete requests</string>
+    <string name="title_activity_profile_tab_blocked">ProfileTabBlocked</string>
+
+    <string name="contentDescCamera">Camera</string>
+    <string name="contentDescSend">Send</string>
+
+    <string name="more_options">Options</string>
+    <string name="send_photo">Photo</string>
+    <string name="ContactChatText">CONTACTS</string>
+    <string name="ChatChatText">CHATS</string>
+    <string name="MessageChatText">MESSAGES</string>
+    <string name="DateChat">now</string>
+    <string name="loading_text_photo">Finishing up...</string>
+    <string name="loading_processing">Processing...</string>
+    <string name="loading_startCampaign">Start campaign...</string>
+    <string name="loading_savingCampaign">Saving campaign...</string>
+    <string name="btnCall_to_action">Which Call-to-Action button do you want to use?</string>
+    <string name="new_btnCall_to_action">What can our community do?</string>
+    <string name="title_what_can">What can our community do?</string>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
+    <string name="desc_btnCall_to_action">The button helps people take an action. People see it on your detail update. You can edit it any time.
+    </string>
+    <string name="new_desc_btnCall_to_action">Choose an action to help your update.</string>
+    <string name="title_choose_update">Choose an action to help your update.</string>
+    <string name="title_choose_challenge">Choose an action to help your challenge.</string>
+    <string name="title_choose_goal">Choose an action to help you achieve your goal.</string>
+    <string name="title_placeholder_goal">Write out your next objective.</string>
+    <string name="wblink">Add Url</string>
+    <string name="desceblink">Enter your website URL</string>
+    <string name="descdetailupdate">What can you do?</string>
+    <string name="title_activity_goal_achieved">Goal Achieved</string>
+    <string name="title_activity_scrolling_camp">ScrollingActivityCamp</string>
+    <string name="achieved_title">Goal Achieved!</string>
+    <string name="achieved_desc">
+        On the other hand, we denounce with righteous indignation and dislike men who are so beguiled
+        and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot
+        foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail
+        in their duty through weakness of will, which is the same as saying through shrinking from toil and pain.
+        These cases are perfectly simple and easy to distinguish. In a free hour,
+        when our power of choice is untrammelled and when nothing prevents our being able to do what we like best,
+        every pleasure is to be welcomed and every pain avoided.
+        But in certain circumstances and owing to the claims of duty or the obligations of business it will
+        frequently occur that pleasures have to be repudiated and annoyances accepted.
+        The wise man therefore always holds in these matters to this principle of selection:
+        he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.
+        On the other hand, we denounce with righteous indignation and dislike men who are so beguiled
+        and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot
+        foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail
+        in their duty through weakness of will, which is the same as saying through shrinking from toil and pain.
+        These cases are perfectly simple and easy to distinguish. In a free hour,
+        when our power of choice is untrammelled and when nothing prevents our being able to do what we like best,
+        every pleasure is to be welcomed and every pain avoided.
+        But in certain circumstances and owing to the claims of duty or the obligations of business it will
+        frequently occur that pleasures have to be repudiated and annoyances accepted.
+        The wise man therefore always holds in these matters to this principle of selection:
+        he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.
+        On the other hand, we denounce with righteous indignation and dislike men who are so beguiled
+        and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot
+        foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail
+        in their duty through weakness of will, which is the same as saying through shrinking from toil and pain.
+        These cases are perfectly simple and easy to distinguish. In a free hour,
+        when our power of choice is untrammelled and when nothing prevents our being able to do what we like best,
+        every pleasure is to be welcomed and every pain avoided.
+        But in certain circumstances and owing to the claims of duty or the obligations of business it will
+        frequently occur that pleasures have to be repudiated and annoyances accepted.
+        The wise man therefore always holds in these matters to this principle of selection:
+        he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.
+    </string>
+
+    <string name="to_post">to post</string>
+    <string name="empat">4. Fill the textbox and tap</string>
+    <string name="tiga">3. To create Goal Achieved, tap</string>
+    <string name="dua">2. Tap the</string>
+    <string name="and_choose">and choose</string>
+    <string name="GOALinfo">GOAL</string>
+    <string name="satu">1. Go to your Campaign Page</string>
+    <string name="intructions">When your goal achieved, you should follow this intructions:</string>
+    <string name="What_should_I_do_when_goal_achieved">What should I do when goal achieved?</string>
+
+    <string name="signup_with_facebook">Sign up with Facebook</string>
+    <string name="info_agree_new">By signing up, you agree to our </string>
+
+    <string name="contactusname">Name</string>
+    <string name="contactusemail">Email</string>
+    <string name="contactusphone">Phone</string>
+    <string name="contactusquestions">Questions</string>
+    <string name="signupalready">Already have an account?</string>
+    <string name="signupdonthave">Don\'t have an account?</string>
+    <string name="signupbtn">Sign up</string>
+    <string name="loginbtn">Log in</string>
+    <string name="labelbottomchat">New chat.</string>
+
+    <string name="btnprofadd">Add</string>
+    <string name="btnprofadddesc">Add contact</string>
+    <string name="btnprofaddprivate">Add</string>
+    <string name="btnprofaddprivatedesc">This profile is private.</string>
+
+    <string name="btnupdateregister">Register</string>
+    <string name="btnupdatesign">Sign</string>
+    <string name="btnupdatelearn">Learn</string>
+    <string name="btnupdatedonate">Donate</string>
+    <string name="btnupdatebuy">Buy</string>
+    <string name="btnupdatejoin">Join</string>
+    <string name="btnupdaterequested">Requested</string>
+    <string name="btnupdateact">Act</string>
+    <string name="btnupdateshare">Share</string>
+    <string name="btnupdatesharedesc">Goal achieved</string>
+    <string name="btnNext">Next</string>
+
+    <string name="tabChats">Chats</string>
+    <string name="tabContacts">Contacts</string>
+    <string name="tabGroups">Groups</string>
+    <string name="tabActive">Active</string>
+    <string name="tabPending">Pending</string>
+    <string name="tabRejected">Rejected</string>
+
+    <string name="tabErrorContact">No contacts</string>
+    <string name="tabErrorContactDesc">Tap the new button \nto find contact!</string>
+    <string name="tabErrorConversation">No conversations</string>
+    <string name="tabErrorConversationDesc">Tap the new  button \nto start a conversation!</string>
+
+    <string name="label_brush">Brush</string>
+    <string name="label_emoji">Emoji</string>
+    <string name="label_sticker">Sticker</string>
+    <string name="label_eraser">Eraser</string>
+    <string name="label_text">Text</string>
+
+    <string name="addcomment">Add a comment...</string>
+    <string name="commentViewall">View all</string>
+    <string name="commentReply">replies</string>
+    <string name="commentReplyBtn">Reply</string>
+
+    <string name="txtPending">Pending</string>
+    <string name="txtDecline">Rejected</string>
+
+    <string name="news">News</string>
+    <string name="campaign_tv">Campaign TV</string>
+    <string name="update_forchangeid">#ForChangeID Updates</string>
+    <string name="myCampaign">My Campaign</string>
+    <string name="featured_update">Featured Updates</string>
+    <string name="featured_campaign">Featured Campaigns</string>
+    <string name="safe_spaces">Safe Spaces</string>
+    <string name="contact">Contact</string>
+    <string name="social">Social</string>
+    <string name="education">Education</string>
+    <string name="environment">Environment</string>
+    <string name="join_challenge">JOIN CHALLENGE</string>
+    <string name="acc_challenge">ACCEPT CHALLENGE</string>
+    <string name="detail_events">DETAIL</string>
+    <string name="ask_me">ASK ME</string>
+    <string name="btn_accept">ACCEPT</string>
+
+    <string name="goodcontent">Good content is always preparing</string>
+    <string name="stretch">Let stretching for a moment…</string>
+
+    <string name="agreetoabide">I agree to abide by Campaign\'s platform</string>
+    <string name="communityguidelines">and community guidelines.</string>
+    <string name="registerBold">REGISTER</string>
+    <string name="loginBold">Log in</string>
+    <string name="usefblogin">USE FACEBOOK</string>
+    <string name="readytogo">You are ready to go!</string>
+    <string name="thanksthetime">Thanks for taking the time</string>
+    <string name="needaccount">to take action for change! You need</string>
+    <string name="tocontinue">a Campaign account to continue.</string>
+    <string name="nextregister">CONTINUE</string>
+    <string name="password">Password</string>
+
+    <string name="tab_act">ACT</string>
+    <string name="tab_donate">DONATE</string>
+    <string name="tab_sign">SIGN</string>
+    <string name="tab_learn">LEARN</string>
+    <string name="tab_register">REGISTER</string>
+    <string name="tab_buy">BUY</string>
+    <string name="tab_aschallenges">Post as challenge</string>
+    <string name="allert_challenge">Sorry, this feature only available for public campaign.</string>
+    <string name="txtaggre">I agree to abide by Campaign\'s platform and community guidelines.</string>
+    <string name="txtlearnmore">Learn more.</string>
+
+    <string name="txtusernameoremail">Username or Email</string>
+    <string name="hintusername">champ@gmail.com</string>
+    <string name="loadingtext1">Please wait. . .</string>
+    <string name="loadingtext2">Until the process completed.</string>
+    <string name="loadingtext3">loading. . .</string>
+    <string name="accptchallenge">accepted challenge</string>
+    <string name="private1">This content is hidden because</string>
+    <string name="private1upd">This content is hidden</string>
+    <string name="private2">is a private campaign. Join</string>
+    <string name="private2profile">is a private account. Add</string>
+    <string name="private3">to see their content and activities.</string>
+    <string name="private3upd">their content and activities.</string>
+    <string name="info_challenge">Remember that all actions taken are a public show of support to the campaign. Thank you!</string>
+    <string name="inviteonly">Invite Only</string>
+    <string name="chatus">Chat with us</string>
+    <string name="donhave">Don\'t have an account?</string>
+    <string name="textprivateprofile">This account is Private.</string>
+    <string name="textprivateprofile2">Add this contact to chat with them and to see their activity.</string>
+    <string name="chathere">We are still an invite only platform. If you want to start a campaign for a better world, let\'s have a chat here.</string>
+
 </resources>
