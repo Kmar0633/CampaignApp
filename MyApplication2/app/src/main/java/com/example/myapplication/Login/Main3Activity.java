@@ -21,16 +21,19 @@ private ViewPager slideviewPager;
 private SliderAdapter sliderAdapter;
 private TextView[] mDots;
 private LinearLayout mDotsLayout;
+private TextView loginText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
+        loginText=(TextView)findViewById(R.id.text_activityMain3_loginBtn);
         mDotsLayout=(LinearLayout) findViewById(R.id.linearLayout_activityMain3_linearLayout);
         slideviewPager=(ViewPager)findViewById(R.id.viewpager);
         sliderAdapter=new SliderAdapter(this);
         slideviewPager.setAdapter(sliderAdapter);
 
         addDotsIndicator();
+
         slideviewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             public void onPageScrollStateChanged(int state) {
 
@@ -49,6 +52,13 @@ private LinearLayout mDotsLayout;
                 }
 
                 mDots[position].setTextColor(getResources().getColor(R.color.Blue));
+            }
+        });
+        loginText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(intent);
             }
         });
     }

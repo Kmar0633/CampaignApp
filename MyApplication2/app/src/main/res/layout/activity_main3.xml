@@ -27,10 +27,13 @@
 
     </LinearLayout>
     <TextView
+        android:id="@+id/text_activityMain3_loginBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Login"
         android:textStyle="bold"
+        android:clickable="true"
+        android:onClick="onClick"
         android:layout_marginLeft="330dp"
         android:textColor="@color/CampaignBlack"
         android:layout_marginRight="10dp"

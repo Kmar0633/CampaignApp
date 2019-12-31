@@ -289,41 +289,7 @@
 
     </RelativeLayout>
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginTop="250dp"
-
-            android:layout_marginRight="800dp"
-
-            android:paddingBottom="50dp">
-
-            <TextView
-                android:id="@+id/text_activityLoginNew_yesBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:textColor="@color/CampaignBlack"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:clickable="true"
-                android:onClick="onClick"
-                android:text="Yes" />
-
-            <TextView
-                android:id="@+id/text_activityLoginNew_noBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginTop="40dp"
-                android:textColor="@color/CampaignBlack"
-                android:layout_marginRight="20dp"
-                android:layout_marginLeft="20dp"
-                android:clickable="true"
-                android:onClick="onClick"
-                android:text="No" />
-
-
-        </RelativeLayout>
+        
     </RelativeLayout>
 
     </ScrollView>
