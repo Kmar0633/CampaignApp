@@ -54,7 +54,7 @@ private LinearLayout mDotsLayout;
     }
 
     private void addDotsIndicator(){
-        mDots=new TextView[3];
+        mDots=new TextView[4];
         for(int i=0; i<mDots.length;i++){
 
 mDots[i]=new TextView(this);
@@ -66,6 +66,7 @@ mDots[i]=new TextView(this);
         }
         mDots[1].setTextColor(getResources().getColor(R.color.gray_1));
         mDots[2].setTextColor(getResources().getColor(R.color.gray_1));
+        mDots[3].setTextColor(getResources().getColor(R.color.gray_1));
     }
 
 }
