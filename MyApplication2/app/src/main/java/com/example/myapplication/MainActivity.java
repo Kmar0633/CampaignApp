@@ -96,6 +96,7 @@ public void getEventChallengesData() {
 
                 @Override
                 public void onCancelled(@NonNull DatabaseError databaseError) {
+                    Log.e("kevin",databaseError.getMessage());
 
                 }
             });
