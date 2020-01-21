@@ -44,11 +44,11 @@ public class EventChallengesListAdapter extends BaseAdapter {
         LayoutInflater layoutInflater=(LayoutInflater) activity.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
         view = layoutInflater.inflate(R.layout.item_event_challenge, null);
         ImageView imageView=(ImageView)view.findViewById(R.id.image_eventChallenges_eventImage);
-        TextView textView=(TextView)view.findViewById(R.id.text_itemEventChallenge_challengeId);
+   //     TextView textView=(TextView)view.findViewById(R.id.text_itemEventChallenge_challengeId);
         ImageView playIconAction=(ImageView)view.findViewById(R.id.image_itemEventChallenge_videoIcon);
-        textView.setText(this.groupChallengeEntityArrayList.get(i).getTitle());
-        TextView challengeName=(TextView)view.findViewById(R.id.text_itemEventChallenge_title);
-        textView.setText(this.groupChallengeEntityArrayList.get(i).getTitle());
+   //     textView.setText(this.groupChallengeEntityArrayList.get(i).getTitle());
+     //   TextView challengeName=(TextView)view.findViewById(R.id.text_itemEventChallenge_title);
+    //    textView.setText(this.groupChallengeEntityArrayList.get(i).getTitle());
         Glide.with(activity).load(urlLink+groupChallengeEntityArrayList.get(i).getImage_url()).into(imageView);
       //  Log.e("turn",String.valueOf(groupChallengeEntityArrayList.get(i).isVideo()));
 
